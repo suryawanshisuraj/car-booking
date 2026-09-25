@@ -75,4 +75,3 @@ jay-bhavani-tours-and-travels/
 ### Option 2: Open Directly
 
 Simply double-click `index.html` or open it with any web browser (Chrome, Edge, Firefox, Safari).
-<!-- auto-sync test -->
