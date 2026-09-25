@@ -1,53 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fde047" />
-      <stop offset="50%" stop-color="#f59e0b" />
-      <stop offset="100%" stop-color="#b45309" />
+      <stop offset="60%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
     </linearGradient>
-    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
+    <linearGradient id="bgPlate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16203d" />
+      <stop offset="100%" stop-color="#0b1329" />
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.35"/>
+    <filter id="royalGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#2563eb" flood-opacity="0.4" />
     </filter>
   </defs>
-  <!-- Background Shield -->
-  <path d="M 60 8 Q 98 12 106 42 Q 106 82 60 112 Q 14 82 14 42 Q 22 12 60 8 Z" 
-        fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="3" filter="url(#glow)" />
-  
-  <!-- Outer gold ring accent -->
-  <path d="M 60 16 Q 92 20 98 44 Q 98 76 60 102 Q 22 76 22 44 Q 28 20 60 16 Z" 
-        fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
 
-  <!-- Taxi Top Light / Crown -->
-  <rect x="52" y="32" width="16" height="5" rx="2" fill="url(#goldGrad)" />
-  <text x="60" y="36" font-family="Arial, sans-serif" font-size="3.5" font-weight="900" fill="#0f172a" text-anchor="middle">TAXI</text>
-
-  <!-- Car Outline -->
-  <path d="M 40 48 L 47 38 L 73 38 L 80 48 L 86 52 C 88 53 88 56 86 57 L 86 64 C 86 66 84 67 82 67 L 78 67 C 76 67 75 66 75 64 L 75 62 L 45 62 L 45 64 C 45 66 44 67 42 67 L 38 67 C 36 67 34 66 34 64 L 34 57 C 32 56 32 53 34 52 Z" 
-        fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Hexagonal Shield Badge -->
+  <path d="M 70 8 L 122 28 L 122 84 Q 122 118 70 134 Q 18 118 18 84 L 18 28 Z" 
+        fill="url(#bgPlate)" stroke="url(#azureGrad)" stroke-width="3" filter="url(#royalGlow)" />
   
+  <!-- Inner Dynamic Ring Accent -->
+  <path d="M 70 16 L 114 34 L 114 82 Q 114 110 70 124 Q 26 110 26 82 L 26 34 Z" 
+        fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8" />
+
+  <!-- Speed Wings -->
+  <path d="M 32 50 C 44 42 60 42 70 42 C 80 42 96 42 108 50 C 98 56 84 56 70 56 C 56 56 42 56 32 50 Z" 
+        fill="url(#azureGrad)" opacity="0.35" />
+
+  <!-- Sleek Modern Sedan Icon -->
+  <path d="M 44 64 L 54 51 L 86 51 L 96 64 L 102 67 C 105 68 106 72 104 74 L 104 80 C 104 82 102 84 100 84 L 96 84 C 94 84 93 83 93 81 L 93 79 L 47 79 L 47 81 C 47 83 46 84 44 84 L 40 84 C 38 84 36 82 36 80 L 36 74 C 34 72 35 68 38 67 Z" 
+        fill="none" stroke="url(#azureGrad)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+
   <!-- Windshield -->
-  <polygon points="49,40 71,40 76,47 44,47" fill="url(#goldGrad)" opacity="0.85" />
+  <polygon points="56,53 84,53 90,62 50,62" fill="url(#azureGrad)" opacity="0.9" />
 
-  <!-- Headlights -->
-  <circle cx="39" cy="54" r="2.5" fill="#fde047" />
-  <circle cx="81" cy="54" r="2.5" fill="#fde047" />
+  <!-- Modern Dual Headlights (Glow) -->
+  <circle cx="42" cy="70" r="2.8" fill="#fde047" />
+  <circle cx="98" cy="70" r="2.8" fill="#fde047" />
 
-  <!-- Wheels -->
-  <circle cx="44" cy="62" r="3.5" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="2" />
-  <circle cx="76" cy="62" r="3.5" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="2" />
+  <!-- Alloy Wheels with Gold Center -->
+  <circle cx="48" cy="80" r="4.5" fill="#0b1329" stroke="url(#azureGrad)" stroke-width="2.2" />
+  <circle cx="48" cy="80" r="1.8" fill="url(#goldAccent)" />
+  <circle cx="92" cy="80" r="4.5" fill="#0b1329" stroke="url(#azureGrad)" stroke-width="2.2" />
+  <circle cx="92" cy="80" r="1.8" fill="url(#goldAccent)" />
 
-  <!-- Brand Initials JB -->
-  <text x="60" y="86" font-family="'Outfit', 'Arial Black', sans-serif" font-size="14" font-weight="900" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2">J B</text>
-  
-  <!-- Subtext -->
-  <text x="60" y="97" font-family="Arial, sans-serif" font-size="5.5" font-weight="700" fill="#e2e8f0" text-anchor="middle" letter-spacing="1.5">TOURS &amp; TRAVELS</text>
-  
-  <!-- Stars -->
-  <polygon points="60,22 61.5,26 65,26 62,28.5 63,32 60,29.5 57,32 58,28.5 55,26 58.5,26" fill="url(#goldGrad)" />
-  <polygon points="48,25 49,28 52,28 49.5,30 50.5,33 48,31 45.5,33 46.5,30 44,28 47,28" fill="url(#goldGrad)" transform="scale(0.8) translate(12, 4)" />
-  <polygon points="72,25 73,28 76,28 73.5,30 74.5,33 72,31 69.5,33 70.5,30 68,28 71,28" fill="url(#goldGrad)" transform="scale(0.8) translate(18, 4)" />
+  <!-- Crown / Star Accent -->
+  <polygon points="70,22 72.5,27 78,27 73.5,30.5 75,36 70,32.5 65,36 66.5,30.5 62,27 67.5,27" fill="url(#goldAccent)" />
+
+  <!-- Brand Typography -->
+  <text x="70" y="102" font-family="'Outfit', 'Montserrat', sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">JAY BHAVANI</text>
+  <text x="70" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="700" fill="url(#goldAccent)" text-anchor="middle" letter-spacing="2">TOURS &amp; TRAVELS</text>
 </svg>
