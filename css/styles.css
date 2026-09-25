@@ -1809,84 +1809,447 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   Footer (Light Theme)
+   Master Multi-Tier Concierge Footer (Light Luxury Theme)
    ========================================================================== */
-.footer {
+.footer-master {
   background: #f8fafc;
   color: #475569;
-  padding: 72px 0 32px;
   border-top: 1px solid #e2e8f0;
+  position: relative;
 }
 
-.footer-grid {
+/* Tier 1: Service Guarantees Ribbon */
+.footer-guarantees {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 34px 0;
+}
+
+.footer-guarantees-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1.4fr;
-  gap: 48px;
-  margin-bottom: 56px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
 }
 
-.footer-logo {
-  margin-bottom: 18px;
+.guarantee-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
 }
 
-.footer-logo .logo-title {
+.guarantee-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.guarantee-card:hover .guarantee-icon {
+  transform: translateY(-2px);
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.guarantee-text h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #0f172a;
+  margin-bottom: 4px;
 }
 
-.footer p {
-  font-size: 0.94rem;
-  line-height: 1.6;
-  max-width: 340px;
+.guarantee-text p {
+  font-size: 0.82rem;
   color: #64748b;
+  line-height: 1.45;
+  margin: 0;
 }
 
-.footer h4 {
+/* Tier 2: Interactive Highway Corridor Quick Links */
+.footer-corridors-bar {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+}
+
+.footer-corridors-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.corridors-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.footer-corridor-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-chip {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  white-space: nowrap;
+}
+
+.footer-chip:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Tier 3: Emergency Dispatch Central Helpline Banner */
+.footer-helpline-card {
+  margin: 36px 0 44px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  padding: 30px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid #334155;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-helpline-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.helpline-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.helpline-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.helpline-info p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+.helpline-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.btn-helpline-phone {
+  background: #ffffff;
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-helpline-phone:hover {
+  background: #f8fafc;
+  color: #2563eb !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.btn-helpline-wa {
+  background: #25D366;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.btn-helpline-wa:hover {
+  background: #1ebd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+/* Tier 4: Main Footer Directory Grid (4 Columns) */
+.footer-directory {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.15fr 1.15fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-col h4 {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.footer-grid div:nth-child(2) {
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.brand-col .footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.brand-col .footer-logo .logo-title {
+  color: #0f172a;
+}
+
+.brand-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 360px;
+}
+
+.accreditation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.accreditation-badge svg {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 11px;
 }
 
-.footer-grid div:nth-child(2) a {
+.footer-links li a {
   color: #475569;
-  font-size: 0.92rem;
-  transition: color var(--transition-fast);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
 }
 
-.footer-grid div:nth-child(2) a:hover {
-  color: var(--primary);
+.footer-links li a span {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.footer-links li a:hover {
+  color: #2563eb;
   transform: translateX(4px);
 }
 
-.footer-grid div:nth-child(3) {
+.footer-contact-block {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.92rem;
-}
-
-.footer-grid div:nth-child(3) a {
+  font-weight: 700;
+  text-decoration: none;
   color: #0f172a;
-  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-.footer-grid div:nth-child(3) a:hover {
-  color: var(--primary);
+.contact-link.highlight {
+  color: #2563eb;
+  font-size: 1.05rem;
 }
 
-.copyright {
-  text-align: center;
-  padding-top: 32px;
+.contact-link.wa {
+  color: #16a34a;
+}
+
+.contact-link:hover {
+  color: #1d4ed8;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.contact-detail svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+/* Tier 5: Executive Bottom Bar */
+.footer-bottom-bar {
+  background: #f1f5f9;
   border-top: 1px solid #e2e8f0;
-  font-size: 0.85rem;
-  color: #94a3b8;
+  padding: 22px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.copyright-text {
+  font-weight: 500;
+}
+
+.payment-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.payment-title {
+  font-weight: 600;
+  color: #475569;
+}
+
+.pay-tag {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.safety-text {
+  font-weight: 600;
+  color: #1e3a8a;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* ==========================================================================
