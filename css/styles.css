@@ -726,14 +726,14 @@ input, select, textarea {
 
 .fleet-tab:hover {
   border-color: var(--primary);
-  background: #fffbeb;
+  background: var(--primary-light);
 }
 
 .fleet-tab.active {
-  background: var(--secondary);
-  color: var(--primary);
-  border-color: var(--secondary);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
 }
 
 .cards.fleet-results {
@@ -753,8 +753,8 @@ input, select, textarea {
 
 .vehicle-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.4);
 }
 
 .vehicle-image {
@@ -779,13 +779,14 @@ input, select, textarea {
   position: absolute;
   top: 14px;
   right: 14px;
-  background: rgba(15, 23, 42, 0.85);
-  color: var(--primary);
+  background: rgba(11, 19, 41, 0.9);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
   font-size: 0.76rem;
   font-weight: 700;
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
