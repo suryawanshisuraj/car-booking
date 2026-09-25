@@ -330,7 +330,7 @@ function initBookingModal() {
       const notes = modalForm.modalNotes?.value.trim() || '';
 
       if (!customerName || !phone || !pickupLocation || !dropLocation || !date || !time) {
-        showToast('⚠️ Please fill in all required fields.', 'warning');
+        showToast('Please fill in all required fields.', 'warning');
         return;
       }
 
