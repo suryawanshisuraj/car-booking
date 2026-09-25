@@ -1621,17 +1621,6 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   Mobile Actions Bar (Bottom Sticky)
-   ========================================================================== */
-.mobile-actions {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(15, 23, 42, 0.96);
-  backdrop-filter: blur(16px);
-/* ==========================================================================
    Mobile Actions Bar (Bottom Sticky - Light Theme)
    ========================================================================== */
 .mobile-actions {
