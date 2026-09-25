@@ -129,10 +129,17 @@ console.log('===============================================================\n')
 function shouldIgnore(relPath) {
   const norm = relPath.replace(/\\/g, '/');
   return (
-    norm.includes('.git/') ||
-    norm.includes('node_modules/') ||
-    norm.includes('dist/') ||
-    norm.includes('.vite/') ||
+    norm === '.git' ||
+    norm.startsWith('.git/') ||
+    norm.includes('/.git/') ||
+    norm.includes('/.git') ||
+    norm === 'node_modules' ||
+    norm.startsWith('node_modules/') ||
+    norm.includes('/node_modules/') ||
+    norm === 'dist' ||
+    norm.startsWith('dist/') ||
+    norm.includes('/dist/') ||
+    norm.startsWith('.vite/') ||
     norm.endsWith('.log') ||
     norm.endsWith('auto-sync.js') ||
     norm.endsWith('start-auto-sync.bat')
