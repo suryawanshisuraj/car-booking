@@ -379,23 +379,23 @@ export function openBookingModal(options = {}) {
 function sendBookingToWhatsApp(data) {
   const phone = "919529573880";
 
-  const message = `*🚕 JAY BHAVANI TOURS AND TRAVELS - CAB BOOKING REQUEST*
+  const message = `*JAY BHAVANI TOURS AND TRAVELS - CAB BOOKING REQUEST*
 ----------------------------------------
-👤 *Customer Name:* ${data.customerName}
-📞 *Phone Number:* ${data.phone}
-📍 *Pickup Location:* ${data.pickupLocation}
-🏁 *Drop Location:* ${data.dropLocation}
-📅 *Journey Date:* ${data.date}
-⏰ *Pickup Time:* ${data.time}
-🚗 *Vehicle Preference:* ${data.vehicle || 'Any (Best Available)'}
-🛣️ *Trip Type:* ${data.tripType || 'Standard'}
-${data.notes ? `📝 *Special Requests:* ${data.notes}\n` : ''}----------------------------------------
+*Customer Name:* ${data.customerName}
+*Phone Number:* ${data.phone}
+*Pickup Location:* ${data.pickupLocation}
+*Drop Location:* ${data.dropLocation}
+*Journey Date:* ${data.date}
+*Pickup Time:* ${data.time}
+*Vehicle Preference:* ${data.vehicle || 'Any (Best Available)'}
+*Trip Type:* ${data.tripType || 'Standard'}
+${data.notes ? `*Special Requests:* ${data.notes}\n` : ''}----------------------------------------
 _Sent via Jay Bhavani Tours and Travels Web Booking_`;
 
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
 
-  showToast('🚀 Opening WhatsApp to confirm your ride...', 'success');
+  showToast('Opening WhatsApp to confirm your ride...', 'success');
 
   setTimeout(() => {
     window.open(whatsappUrl, '_blank');
