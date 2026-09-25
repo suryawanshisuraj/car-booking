@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reliable taxi booking service for local and outstation travel. Jay Bhavani Tours and Travels offers 24/7 verified drivers, airport drops, and intercity cabs.">
+  <title>Jay Bhavani tours and travels</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="/image/logo.svg">
+</head>
+<body>
+  <div id="root">
+    
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="logo" href="/" data-discover="true">
+          <span class="logo-mark">
+            <img alt="Jay Bhavani Tours and Travels" src="/image/logo.png">
+          </span>
+          <span>Jay Bhavani <span>Tours and Travels</span></span>
+        </a>
+
+        <button type="button" class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="nav-links">
+          <a class="active" href="/" data-discover="true" aria-current="page">Home</a>
+          <a class="" href="/services" data-discover="true">Services</a>
+          <a class="" href="/vehicles" data-discover="true">Vehicles</a>
+          <a class="" href="/routes" data-discover="true">Routes</a>
+          <a class="" href="/about" data-discover="true">About</a>
+          <a class="" href="/contact" data-discover="true">Contact</a>
+          <a class="btn btn-primary nav-book" href="/book" data-discover="true">Book Cab</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Background Slider -->
+      <section class="hero" id="home">
+        <div class="hero-background">
+          <div class="hero-slide" style="background-image: url('/image/taxi-1.jpg');"></div>
+          <div class="hero-slide active" style="background-image: url('/image/taxi-2.jpg');"></div>
+          <div class="hero-slide" style="background-image: url('/image/taxi-3.jpg');"></div>
+          <div class="hero-slide" style="background-image: url('/image/taxi-4.jpg');"></div>
+          <div class="hero-dark-overlay"></div>
+        </div>
+
+        <div class="hero-slider-nav" id="hero-slider-nav"></div>
+
+        <div class="hero-overlay">
+          <div class="container hero-grid">
+            <div class="hero-content">
+              <div class="eyebrow hero-eyebrow">
+                <span></span>TRUSTED CAB SERVICE
+              </div>
+              <h1>Your Journey.<br><strong>Our Responsibility.</strong></h1>
+              <p>Reliable local, airport and outstation cab service with professional drivers and comfortable vehicles.</p>
+              
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="/book" data-discover="true">
+                  Book a Cab
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+                <a href="tel:+919529573880" class="btn btn-light">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  Call Now
+                </a>
+              </div>
+
+              <div class="hero-trust">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  Verified drivers
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  Safe travel
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16.5 12"></polyline>
+                  </svg>
+                  24/7
+                </span>
+              </div>
+            </div>
+
+            <!-- Quick Booking Card inside Hero -->
+            <div class="booking-card">
+              <div class="card-top">
+                <div>
+                  <span class="mini-label">QUICK BOOKING</span>
+                  <h3>Book your ride</h3>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car-front">
+                  <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"></path>
+                  <path d="M7 14h.01"></path>
+                  <path d="M17 14h.01"></path>
+                  <rect width="18" height="8" x="3" y="10" rx="2"></rect>
+                  <path d="M5 18v2"></path>
+                  <path d="M19 18v2"></path>
+                </svg>
+              </div>
+
+              <form id="hero-booking-form">
+                <label>
+                  👤 Customer Name
+                  <input placeholder="Enter your name" required type="text" name="customerName">
+                </label>
+
+                <label>
+                  📞 Phone Number
+                  <input placeholder="+91 98765 43210" required type="tel" name="phone">
+                </label>
+
+                <label>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Pickup Location
+                  <input placeholder="Enter pickup location" required type="text" name="pickupLocation">
+                </label>
+
+                <label>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Drop Location
+                  <input placeholder="Enter destination" required type="text" name="dropLocation">
+                </label>
+
+                <div class="form-row">
+                  <label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days">
+                      <path d="M8 2v4"></path>
+                      <path d="M16 2v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
+                      <path d="M8 14h.01"></path>
+                      <path d="M12 14h.01"></path>
+                      <path d="M16 14h.01"></path>
+                      <path d="M8 18h.01"></path>
+                      <path d="M12 18h.01"></path>
+                      <path d="M16 18h.01"></path>
+                    </svg>
+                    Date
+                    <input required type="date" name="date">
+                  </label>
+
+                  <label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16.5 12"></polyline>
+                    </svg>
+                    Time
+                    <input required type="time" name="time">
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-whatsapp full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                  </svg>
+                  Send Booking to WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="stats">
+        <div class="container stats-grid">
+          <div>
+            <b>10+</b>
+            <span>Years Experience</span>
+          </div>
+          <div>
+            <b>5,000+</b>
+            <span>Happy Customers</span>
+          </div>
+          <div>
+            <b>24/7</b>
+            <span>Booking Support</span>
+          </div>
+          <div>
+            <b>100%</b>
+            <span>Customer Focus</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-title">
+            <div class="eyebrow">WHAT WE OFFER</div>
+            <h2>Travel made simple</h2>
+            <p>Choose the service that fits your journey.</p>
+          </div>
+
+          <div class="cards four">
+            <div class="service-card">
+              <div class="service-icon">✈️</div>
+              <h3>Airport Transfer</h3>
+              <p>On-time airport pickup and drop service with comfortable vehicles for Mumbai CSMI &amp; Navi Mumbai airports.</p>
+              <a href="/book" data-discover="true">
+                Book Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🚕</div>
+              <h3>Local Cab</h3>
+              <p>Quick and reliable rides around Mumbai, Navi Mumbai, Thane and surrounding cities.</p>
+              <a href="/book" data-discover="true">
+                Book Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🛣️</div>
+              <h3>Outstation</h3>
+              <p>One-way and round-trip cab service to Pune, Shirdi, Nashik, Mahabaleshwar and all nearby destinations.</p>
+              <a href="/book" data-discover="true">
+                Book Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">💼</div>
+              <h3>Corporate Travel</h3>
+              <p>Professional and comfortable transportation for business meetings, conferences, and employee transit.</p>
+              <a href="/book" data-discover="true">
+                Book Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fleet Section -->
+      <section class="section section-alt" id="vehicles">
+        <div class="container">
+          <div class="section-title">
+            <div class="eyebrow">OUR FLEET</div>
+            <h2>Choose your perfect ride</h2>
+            <p>Select a vehicle category for your journey.</p>
+          </div>
+
+          <div class="fleet-tabs">
+            <button type="button" class="fleet-tab active" data-category="sedan">🚘 Sedan</button>
+            <button type="button" class="fleet-tab" data-category="suv">🚙 SUV</button>
+            <button type="button" class="fleet-tab" data-category="suv_plus">🚐 SUV Plus</button>
+          </div>
+
+          <!-- Dynamic Fleet Results populated by app.js -->
+          <div class="cards fleet-results">
+            <!-- Fallback Static Cards for immediate HTML rendering -->
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img alt="Swift Dzire" loading="lazy" src="/image/cars/Dzire.jpg">
+                <span class="vehicle-category">Sedan</span>
+              </div>
+              <div class="vehicle-content">
+                <h3>Swift Dzire</h3>
+                <p>Comfortable and economical sedan for local, airport and outstation travel.</p>
+                <div class="vehicle-meta">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    4 seats
+                  </span>
+                  <span>🧳 2 bags</span>
+                  <span>❄️ AC</span>
+                  <span style="margin-left: auto; color: var(--primary-dark); font-weight: 700;">₹12/km</span>
+                </div>
+                <button type="button" class="btn btn-dark full book-vehicle-btn" data-vehicle="Swift Dzire">
+                  Book Swift Dzire
+                </button>
+              </div>
+            </div>
+
+            <div class="vehicle-card">
+              <div class="vehicle-image">
+                <img alt="Aura" loading="lazy" src="/image/cars/Aura.jpg">
+                <span class="vehicle-category">Sedan</span>
+              </div>
+              <div class="vehicle-content">
+                <h3>Aura</h3>
+                <p>Comfortable sedan with excellent space for family journeys.</p>
+                <div class="vehicle-meta">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    4 seats
+                  </span>
+                  <span>🧳 2 bags</span>
+                  <span>❄️ AC</span>
+                  <span style="margin-left: auto; color: var(--primary-dark); font-weight: 700;">₹12/km</span>
+                </div>
+                <button type="button" class="btn btn-dark full book-vehicle-btn" data-vehicle="Aura">
+                  Book Aura
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Routes Section -->
+      <section class="section" id="routes">
+        <div class="container">
+          <div class="section-title">
+            <div class="eyebrow">POPULAR DESTINATIONS</div>
+            <h2>Frequent Travel Routes</h2>
+            <p>Transparent upfront pricing for our most popular intercity trips and airport transfers.</p>
+          </div>
+
+          <div class="routes-grid" id="popular-routes-list">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us & Testimonials -->
+      <section class="section section-alt" id="about">
+        <div class="container split">
+          <div>
+            <div class="section-title">
+              <div class="eyebrow">WHY JAY BHAVANI TOURS AND TRAVELS</div>
+              <h2>More than just a cab</h2>
+              <p>We focus on safe, comfortable and dependable travel.</p>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Safe &amp; Trusted</h4>
+                  <p>Professional drivers and well-maintained vehicles.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee">
+                    <path d="M6 3h12"></path>
+                    <path d="M6 8h12"></path>
+                    <path d="m6 13 8.5 8"></path>
+                    <path d="M6 13h3"></path>
+                    <path d="M9 13c6.667 0 6.667-10 0-10"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Fair Pricing</h4>
+                  <p>Clear pricing with no surprise charges.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16.5 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Always On Time</h4>
+                  <p>We value your time and travel schedule.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Customer First</h4>
+                  <p>Friendly support from booking to drop-off.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star">
+              <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+            </svg>
+            <p>“The driver arrived before time and the journey was very comfortable. Excellent service.”</p>
+            <div><b>Happy Customer</b></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Reviews Section with Embedded Maps -->
+      <section class="section reviews-section" id="reviews">
+        <div class="container">
+          <div class="section-title">
+            <div class="eyebrow">GOOGLE REVIEWS</div>
+            <h2>What our customers say</h2>
+            <p>Visit our Google Business Profile to see our latest customer reviews and ratings.</p>
+          </div>
+
+          <div class="google-reviews-panel">
+            <div class="google-map-card">
+              <iframe title="Jay Bhavani Tours and Travels on Google Maps" 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1021393.4900078462!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2477a92a2121e51b%3A0x2417aa53b81a1394!2sJay%20Bhavani%20Tours%20and%20Travels!5e0!3m2!1sen!2sin!4v1786896415241!5m2!1sen!2sin" 
+                      width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="min-height: 420px; border: 0; display: block;">
+              </iframe>
+            </div>
+
+            <div class="google-reviews-info">
+              <div class="google-logo">G</div>
+              <h3>Google Reviews</h3>
+              <div class="rating-line">
+                <span>★★★★★</span>
+                <strong>See our latest rating</strong>
+              </div>
+              <p>Read genuine customer feedback, check our business location, photos, rating and the latest reviews directly on Google.</p>
+              
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://www.google.com/maps/search/?api=1&query=Jay%20Bhavani%20Tours%20and%20Travels&query_place_id=ChIJG-UhISqpdyQRlBMauFOqFyQ" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                  ⭐ Read Google Reviews
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Jay%20Bhavani%20Tours%20and%20Travels&query_place_id=ChIJG-UhISqpdyQRlBMauFOqFyQ" target="_blank" rel="noopener noreferrer" class="btn btn-light" style="border: 1px solid var(--border);">
+                  📍 Open Google Maps
+                </a>
+              </div>
+              
+              <p style="margin-top: 18px; margin-bottom: 0; font-size: 0.88rem; opacity: 0.75;">
+                Your review helps other customers choose a trusted travel service.
+              </p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 26px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Jay%20Bhavani%20Tours%20and%20Travels&query_place_id=ChIJG-UhISqpdyQRlBMauFOqFyQ" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              ⭐ View All Reviews on Google
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready To Ride CTA Banner -->
+      <section class="cta">
+        <div class="container cta-inner">
+          <div>
+            <div class="eyebrow">READY TO RIDE?</div>
+            <h2>Let's plan your next journey.</h2>
+            <p>Book your cab today and travel with confidence.</p>
+          </div>
+          <a class="btn btn-primary" href="/book" data-discover="true">
+            Book a Cab
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo footer-logo" href="/" data-discover="true">
+            <span class="logo-mark">
+              <img alt="Jay Bhavani Tours and Travels" src="/image/logo.png">
+            </span>
+            <span>Jay Bhavani <span>Tours and Travels</span></span>
+          </a>
+          <p>Safe, comfortable and dependable cab service for local and outstation journeys across Maharashtra.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <a href="/book" data-discover="true">Book Cab</a>
+          <a href="/services" data-discover="true">Services</a>
+          <a href="/vehicles" data-discover="true">Vehicles</a>
+          <a href="/routes" data-discover="true">Routes</a>
+          <a href="/about" data-discover="true">About</a>
+          <a href="/contact" data-discover="true">Contact</a>
+        </div>
+
+        <div>
+          <h4>Contact &amp; Dispatch</h4>
+          <a href="tel:+919529573880">📞 +91 9529573880</a>
+          <a href="https://wa.me/+919529573880" target="_blank" rel="noreferrer">💬 WhatsApp: +91 9529573880</a>
+          <span>🕒 24/7 Booking Support</span>
+          <span>📍 Mumbai, Navi Mumbai &amp; surrounding areas</span>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Jay Bhavani Tours and Travels. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Mobile Quick Bottom Actions -->
+    <div class="mobile-actions">
+      <a href="tel:+919529573880">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        Call
+      </a>
+      <a href="https://wa.me/+919529573880" target="_blank" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+        </svg>
+        WhatsApp
+      </a>
+      <a href="/book" data-discover="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car-front">
+          <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"></path>
+          <path d="M7 14h.01"></path>
+          <path d="M17 14h.01"></path>
+          <rect width="18" height="8" x="3" y="10" rx="2"></rect>
+          <path d="M5 18v2"></path>
+          <path d="M19 18v2"></path>
+        </svg>
+        Book
+      </a>
+    </div>
+
+    <!-- Booking Modal (Native Accessible Dialog with light-dismiss) -->
+    <dialog id="booking-modal" closedby="any" aria-labelledby="modal-booking-title">
+      <div class="modal-header">
+        <h3 id="modal-booking-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"></path>
+            <path d="M7 14h.01"></path>
+            <path d="M17 14h.01"></path>
+            <rect width="18" height="8" x="3" y="10" rx="2"></rect>
+          </svg>
+          Reserve Your Cab
+        </h3>
+        <button type="button" class="modal-close-btn" id="close-modal-btn" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="modal-booking-form">
+          <div class="trip-type-selector">
+            <div class="trip-type-option active" data-type="One Way">One Way</div>
+            <div class="trip-type-option" data-type="Round Trip">Round Trip</div>
+            <div class="trip-type-option" data-type="Airport">Airport</div>
+            <div class="trip-type-option" data-type="Local 8hr/80km">Local Hourly</div>
+          </div>
+          <input type="hidden" name="modalTripType" value="One Way">
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+              Vehicle Category
+              <select name="modalVehicle" style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+                <option value="Swift Dzire (Sedan - 4 Seats)">Swift Dzire (Sedan - 4 Seats, ₹12/km)</option>
+                <option value="Hyundai Aura (Sedan - 4 Seats)">Hyundai Aura (Sedan - 4 Seats, ₹12/km)</option>
+                <option value="Maruti Ertiga (SUV - 6 Seats)">Maruti Ertiga (SUV - 6 Seats, ₹15/km)</option>
+                <option value="Toyota Innova Crysta (Luxury SUV - 7 Seats)">Toyota Innova Crysta (SUV Plus - 7 Seats, ₹19/km)</option>
+                <option value="Tempo Traveller (13/17 Seater)">Tempo Traveller (Group Travel, Custom Rate)</option>
+              </select>
+            </label>
+
+            <div class="form-row">
+              <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+                👤 Full Name
+                <input type="text" name="modalName" placeholder="Your Name" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+              </label>
+              <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+                📞 Mobile Number
+                <input type="tel" name="modalPhone" placeholder="+91 98765 43210" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+              </label>
+            </div>
+
+            <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+              📍 Pickup Address / Landmark
+              <input type="text" name="modalPickup" placeholder="Enter pickup address" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+            </label>
+
+            <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+              🏁 Destination / Drop Address
+              <input type="text" name="modalDrop" placeholder="Enter destination address" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+            </label>
+
+            <div class="form-row">
+              <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+                📅 Travel Date
+                <input type="date" name="modalDate" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+              </label>
+              <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+                ⏰ Pickup Time
+                <input type="time" name="modalTime" required style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+              </label>
+            </div>
+
+            <label style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; font-weight:600;">
+              📝 Special Requests (Optional)
+              <input type="text" name="modalNotes" placeholder="e.g. Flight number, extra luggage space, AC carrier" style="padding:11px 14px; border-radius:12px; border:1.5px solid var(--border); background:#f8fafc;">
+            </label>
+
+            <button type="submit" class="btn btn-whatsapp full" style="margin-top:10px; padding:14px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+              </svg>
+              Confirm &amp; Send to WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+  </div>
+
+  <!-- Main Application Script -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
