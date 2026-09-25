@@ -4,15 +4,20 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette - Premium Warm Amber Gold & Slate Navy */
-  --primary: #f59e0b;
-  --primary-hover: #d97706;
-  --primary-dark: #b45309;
-  --primary-light: #fef3c7;
-  --primary-glow: rgba(245, 158, 11, 0.35);
+  /* Fresh Modern Theme: Royal Sapphire & Obsidian Gold */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-dark: #1e40af;
+  --primary-light: #eff6ff;
+  --primary-glow: rgba(37, 99, 235, 0.35);
 
-  --secondary: #0f172a;
-  --secondary-light: #1e293b;
+  --accent-gold: #f59e0b;
+  --accent-gold-hover: #d97706;
+  --accent-gold-light: #fef3c7;
+  --accent-cyan: #0284c7;
+
+  --secondary: #0b1329;
+  --secondary-light: #16203d;
   --secondary-muted: #334155;
 
   --whatsapp: #25d366;
@@ -27,11 +32,11 @@
   --bg-page: #f8fafc;
   --bg-surface: #ffffff;
   --bg-alt: #f1f5f9;
-  --bg-dark: #090d16;
+  --bg-dark: #070c18;
 
   --border: #e2e8f0;
   --border-subtle: #edf2f7;
-  --border-focus: #f59e0b;
+  --border-focus: #2563eb;
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -43,7 +48,7 @@
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.09);
   --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
-  --shadow-gold: 0 8px 24px var(--primary-glow);
+  --shadow-primary: 0 8px 24px var(--primary-glow);
   --shadow-wa: 0 8px 24px var(--whatsapp-glow);
 
   --transition-fast: 0.18s ease;
