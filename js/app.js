@@ -430,6 +430,7 @@ function initMobileMenu() {
    8. Scroll Navigation Highlighting
    ========================================================================== */
 function initScrollNav() {
+  const navbar = document.querySelector('.navbar');
   const sections = [
     { id: 'home', path: '/' },
     { id: 'services', path: '/services' },
@@ -445,6 +446,10 @@ function initScrollNav() {
     let currentPath = '/';
     let currentId = 'home';
     const scrollY = window.pageYOffset;
+
+    if (navbar) {
+      navbar.classList.toggle('scrolled', scrollY > 30);
+    }
 
     sections.forEach(item => {
       const el = document.getElementById(item.id);
