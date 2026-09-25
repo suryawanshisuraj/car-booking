@@ -231,7 +231,7 @@ function initPopularRoutes() {
     <div class="route-card">
       <div class="route-header">
         <span class="route-tag">${route.distance} • ${route.duration}</span>
-        ${route.popular ? '<span style="font-size:0.75rem; font-weight:700; color:var(--primary-dark); background:var(--primary-light); padding:2px 8px; border-radius:12px;">🔥 Popular</span>' : ''}
+        ${route.popular ? '<span style="font-size:0.75rem; font-weight:700; color:var(--primary-dark); background:var(--primary-light); padding:2px 8px; border-radius:12px;">Popular</span>' : ''}
       </div>
       <div class="route-destination">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
