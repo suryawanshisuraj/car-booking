@@ -193,100 +193,255 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   Header / Navbar
+   Header / Modern Floating Capsule Island Navbar & Top Dispatch Bar
    ========================================================================== */
+
+/* Top Utility Dispatch Bar */
+.top-bar {
+  background: #070c18;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  position: relative;
+  z-index: 101;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-bar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-bar-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.top-bar-route {
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.top-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.top-bar-link:hover {
+  color: var(--primary);
+}
+
+.top-bar-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(37, 211, 102, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.top-bar-wa:hover {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+}
+
+/* Floating Capsule Island Navbar */
 .navbar {
   position: sticky;
-  top: 0;
+  top: 12px;
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 16px;
   transition: all var(--transition-base);
 }
 
 .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(11, 19, 41, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 8px 18px 8px 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(37, 99, 235, 0.15);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 74px;
+  gap: 16px;
+  transition: all var(--transition-base);
+}
+
+.navbar.scrolled .nav-inner {
+  background: rgba(7, 12, 24, 0.97);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(37, 99, 235, 0.3);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.3px;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .logo-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(11, 19, 41, 0.8) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.6);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.25);
+  flex-shrink: 0;
 }
 
 .logo-mark img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
-.logo span span {
-  display: block;
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--primary);
-  letter-spacing: 1.5px;
+.logo-brand-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+
+.logo-subtitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-links a:not(.btn) {
   color: #cbd5e1;
-  font-size: 0.94rem;
-  font-weight: 500;
-  position: relative;
-  padding: 6px 0;
-  transition: color var(--transition-fast);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
 }
 
-.nav-links a:not(.btn):hover,
+.nav-links a:not(.btn):hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .nav-links a.active:not(.btn) {
-  color: var(--primary);
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(29, 78, 216, 0.85) 100%);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.35);
 }
 
-.nav-links a.active:not(.btn)::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 2px;
+.nav-actions-desktop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-nav-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-nav-call:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.btn-nav-call svg {
+  color: #22c55e;
 }
 
 .nav-book {
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 .menu-btn {
