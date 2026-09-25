@@ -1836,17 +1836,17 @@ dialog#booking-modal::backdrop {
     top: 66px;
     left: 10px;
     right: 10px;
-    background: rgba(11, 19, 41, 0.98);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 20px;
     gap: 12px;
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid #e2e8f0;
     transform: translateY(-130%);
     transition: transform var(--transition-base);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
   }
 
   .nav-links.open {
