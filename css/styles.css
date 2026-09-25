@@ -193,16 +193,16 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   Header / Modern Floating Capsule Island Navbar & Top Dispatch Bar
+   Header / Modern Floating Capsule Island Navbar & Top Dispatch Bar (Light Theme)
    ========================================================================== */
 
 /* Top Utility Dispatch Bar */
 .top-bar {
-  background: #070c18;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
   padding: 8px 0;
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #475569;
   position: relative;
   z-index: 101;
 }
@@ -226,9 +226,9 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(37, 99, 235, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(37, 99, 235, 0.3);
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
   padding: 3px 10px;
   border-radius: var(--radius-full);
   font-weight: 700;
@@ -242,12 +242,12 @@ input, select, textarea {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 8px #22c55e;
+  background: #16a34a;
+  box-shadow: 0 0 6px #16a34a;
 }
 
 .top-bar-route {
-  color: #cbd5e1;
+  color: #475569;
   font-size: 0.78rem;
   font-weight: 500;
 }
@@ -263,7 +263,7 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #ffffff;
+  color: #0f172a;
   font-weight: 600;
   transition: color var(--transition-fast);
 }
@@ -276,9 +276,9 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: rgba(37, 211, 102, 0.15);
-  color: #4ade80;
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
   padding: 3px 10px;
   border-radius: var(--radius-full);
   font-weight: 700;
@@ -287,12 +287,12 @@ input, select, textarea {
 }
 
 .top-bar-wa:hover {
-  background: #25d366;
+  background: #16a34a;
   color: #ffffff;
-  border-color: #25d366;
+  border-color: #16a34a;
 }
 
-/* Floating Capsule Island Navbar */
+/* Floating Capsule Island Navbar - Light Glassmorphism */
 .navbar {
   position: sticky;
   top: 12px;
@@ -306,13 +306,13 @@ input, select, textarea {
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(11, 19, 41, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: var(--radius-full);
   padding: 8px 18px 8px 14px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -321,9 +321,9 @@ input, select, textarea {
 }
 
 .navbar.scrolled .nav-inner {
-  background: rgba(7, 12, 24, 0.97);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(37, 99, 235, 0.3);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.1);
+  border-color: #cbd5e1;
 }
 
 .logo {
@@ -340,10 +340,10 @@ input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(11, 19, 41, 0.8) 100%);
-  border: 1.5px solid rgba(245, 158, 11, 0.6);
+  background: #ffffff;
+  border: 1.5px solid #d97706;
   overflow: hidden;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.15);
   flex-shrink: 0;
 }
 
@@ -362,7 +362,7 @@ input, select, textarea {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #0f172a;
   letter-spacing: -0.3px;
   line-height: 1.15;
 }
@@ -379,14 +379,14 @@ input, select, textarea {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #f1f5f9;
   padding: 4px 6px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid #e2e8f0;
 }
 
 .nav-links a:not(.btn) {
-  color: #cbd5e1;
+  color: #334155;
   font-size: 0.88rem;
   font-weight: 600;
   padding: 7px 15px;
@@ -395,14 +395,14 @@ input, select, textarea {
 }
 
 .nav-links a:not(.btn):hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
+  color: #0f172a;
+  background: #e2e8f0;
 }
 
 .nav-links a.active:not(.btn) {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(29, 78, 216, 0.85) 100%);
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.35);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .nav-actions-desktop {
@@ -415,26 +415,27 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #ffffff;
+  color: #0f172a;
   font-size: 0.85rem;
   font-weight: 700;
   padding: 8px 14px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
   transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
 .btn-nav-call:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #60a5fa;
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #2563eb;
   transform: translateY(-1px);
 }
 
 .btn-nav-call svg {
-  color: #22c55e;
+  color: #16a34a;
 }
 
 .nav-book {
@@ -446,10 +447,11 @@ input, select, textarea {
 
 .menu-btn {
   display: none;
-  color: #ffffff;
+  color: #0f172a;
   padding: 8px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.08);
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
 }
 
 /* ==========================================================================
