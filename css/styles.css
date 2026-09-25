@@ -2458,8 +2458,18 @@ dialog#booking-modal::backdrop {
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
+  .corridors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-guarantees-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-directory {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
 }
 
@@ -2526,6 +2536,19 @@ dialog#booking-modal::backdrop {
     grid-template-columns: 1fr;
   }
 
+  .corridors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .corridor-filter-tabs {
+    gap: 8px;
+  }
+
+  .corridor-tab {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
   .google-reviews-panel {
     grid-template-columns: 1fr !important;
   }
@@ -2543,9 +2566,37 @@ dialog#booking-modal::backdrop {
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
+  /* Footer Mobile */
+  .footer-guarantees-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 18px;
+  }
+
+  .footer-helpline-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 20px;
+    gap: 20px;
+  }
+
+  .helpline-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-directory {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .payment-badges {
+    justify-content: center;
   }
 
   .cta-inner {
