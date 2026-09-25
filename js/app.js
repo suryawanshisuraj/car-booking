@@ -142,10 +142,48 @@ function renderFleet(categoryKey) {
 }
 
 /* ==========================================================================
-   3. Quick Booking Form (Hero Section)
+   3. Quick Booking Launcher & Form (Hero Section)
    ========================================================================== */
 function initHeroBookingForm() {
   const form = document.getElementById('hero-booking-form');
+  const toggleBtn = document.getElementById('toggle-quick-form');
+  const formWrapper = document.getElementById('quick-form-wrapper');
+  const arrowIcon = document.getElementById('toggle-arrow-icon');
+  const tripPills = document.querySelectorAll('.trip-pill');
+  const tripTypeInput = form ? form.querySelector('input[name="tripType"]') : null;
+
+  // 1. Big Interactive Button Trigger (Accordion / Launcher Toggle)
+  if (toggleBtn && formWrapper) {
+    toggleBtn.addEventListener('click', () => {
+      const isCollapsed = formWrapper.classList.toggle('collapsed');
+      toggleBtn.setAttribute('aria-expanded', !isCollapsed);
+      if (arrowIcon) {
+        arrowIcon.textContent = isCollapsed ? '▼' : '▲';
+        arrowIcon.style.transform = isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+      
+      // If opening, autofocus the first input for convenience
+      if (!isCollapsed && form) {
+        const nameInput = form.querySelector('input[name="customerName"]');
+        if (nameInput) setTimeout(() => nameInput.focus(), 250);
+      }
+    });
+  }
+
+  // 2. Interactive Trip Type Pills
+  if (tripPills.length && tripTypeInput) {
+    tripPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        tripPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const selectedType = pill.dataset.type || pill.textContent.trim();
+        tripTypeInput.value = selectedType;
+      });
+    });
+  }
+
+  // 3. Form Submission
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
@@ -157,6 +195,7 @@ function initHeroBookingForm() {
     const dropLocation = form.dropLocation.value.trim();
     const date = form.date.value;
     const time = form.time.value;
+    const tripType = tripTypeInput ? tripTypeInput.value : 'One Way';
 
     if (!customerName || !phone || !pickupLocation || !dropLocation || !date || !time) {
       showToast('⚠️ Please fill in all booking details.', 'warning');
@@ -170,7 +209,7 @@ function initHeroBookingForm() {
       dropLocation,
       date,
       time,
-      tripType: 'Direct Booking'
+      tripType: tripType || 'One Way'
     });
   });
 }
