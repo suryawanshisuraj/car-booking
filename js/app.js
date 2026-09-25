@@ -221,47 +221,139 @@ function initHeroBookingForm() {
 }
 
 /* ==========================================================================
-   4. Popular Routes Section
+   4. Express Highway Corridors Section & Footer Quick Links
    ========================================================================== */
 function initPopularRoutes() {
   const routesContainer = document.getElementById('popular-routes-list');
-  if (!routesContainer) return;
+  const filterTabs = document.querySelectorAll('.corridor-tab');
+  const footerChips = document.querySelectorAll('.footer-chip');
 
-  routesContainer.innerHTML = popularRoutes.map(route => `
-    <div class="route-card">
-      <div class="route-header">
-        <span class="route-tag">${route.distance} • ${route.duration}</span>
-        ${route.popular ? '<span style="font-size:0.75rem; font-weight:700; color:var(--primary-dark); background:var(--primary-light); padding:2px 8px; border-radius:12px;">Popular</span>' : ''}
-      </div>
-      <div class="route-destination">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-        <span>${route.from} ➔ ${route.to}</span>
-      </div>
-      <div class="route-details">
-        <span>Sedan from <b>${route.sedanFare}</b></span>
-        <span>•</span>
-        <span>SUV from <b>${route.suvFare}</b></span>
-      </div>
-      <button type="button" class="btn btn-dark full route-book-btn" 
-              data-from="${route.from}" 
-              data-to="${route.to}">
-        Book This Route
-      </button>
-    </div>
-  `).join('');
+  let currentCategory = 'all';
 
-  routesContainer.querySelectorAll('.route-book-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openBookingModal({
-        pickup: btn.dataset.from,
-        drop: btn.dataset.to,
-        tripType: 'Outstation'
+  function renderCorridors(category = 'all') {
+    if (!routesContainer) return;
+
+    const filtered = category === 'all' 
+      ? popularRoutes 
+      : popularRoutes.filter(r => r.category === category);
+
+    routesContainer.innerHTML = filtered.map(route => `
+      <div class="corridor-card" data-category="${route.category}">
+        <div class="corridor-header">
+          <div class="corridor-highway">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>${route.via}</span>
+          </div>
+          ${route.popular ? '<span class="corridor-popular-badge">Popular Corridor</span>' : ''}
+        </div>
+
+        <!-- Visual Route Transit Path -->
+        <div class="corridor-transit">
+          <div class="transit-point origin">
+            <div class="transit-dot origin-dot"></div>
+            <div class="transit-name">${route.from}</div>
+          </div>
+          
+          <div class="transit-track">
+            <div class="transit-line"></div>
+            <div class="transit-metric-pill">
+              <span>${route.distance}</span>
+              <span class="sep">•</span>
+              <span>${route.duration}</span>
+            </div>
+          </div>
+
+          <div class="transit-point destination">
+            <div class="transit-dot dest-dot">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="transit-name">${route.to}</div>
+          </div>
+        </div>
+
+        ${route.stops ? `
+        <div class="corridor-stops">
+          <span class="stops-label">En-route Highlights:</span>
+          <span class="stops-val">${route.stops}</span>
+        </div>` : ''}
+
+        <!-- Dual Vehicle Fare Comparison Matrix -->
+        <div class="corridor-pricing-matrix">
+          <div class="pricing-box sedan-box">
+            <div class="vehicle-title">Sedan (${route.sedanModel || 'Dzire/Aura'})</div>
+            <div class="vehicle-fare">${route.sedanFare}</div>
+            <div class="vehicle-meta-mini">4 Seats • 2 Bags • AC</div>
+            <button type="button" class="btn btn-route-book btn-book-sedan" 
+                    data-from="${route.from}" 
+                    data-to="${route.to}" 
+                    data-vehicle="Swift Dzire">
+              Book Sedan
+            </button>
+          </div>
+
+          <div class="pricing-box suv-box">
+            <div class="vehicle-title">SUV (${route.suvModel || 'Ertiga/Crysta'})</div>
+            <div class="vehicle-fare">${route.suvFare}</div>
+            <div class="vehicle-meta-mini">6-7 Seats • 4 Bags • AC</div>
+            <button type="button" class="btn btn-route-book btn-book-suv" 
+                    data-from="${route.from}" 
+                    data-to="${route.to}" 
+                    data-vehicle="Maruti Ertiga">
+              Book SUV
+            </button>
+          </div>
+        </div>
+
+        <div class="corridor-footer-guarantee">
+          <span>✓ Fixed Upfront Fare</span>
+          <span>•</span>
+          <span>✓ Verified Chauffeur</span>
+          <span>•</span>
+          <span>✓ Toll Assistance</span>
+        </div>
+      </div>
+    `).join('');
+
+    // Attach click listeners to all booking buttons
+    routesContainer.querySelectorAll('.btn-route-book').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openBookingModal({
+          pickup: btn.dataset.from,
+          drop: btn.dataset.to,
+          vehicle: btn.dataset.vehicle,
+          tripType: 'Outstation'
+        });
       });
     });
-  });
+  }
+
+  // Handle category filter tabs
+  if (filterTabs.length) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentCategory = tab.dataset.filter || 'all';
+        renderCorridors(currentCategory);
+      });
+    });
+  }
+
+  // Initial render
+  renderCorridors('all');
+
+  // Handle footer quick corridor chips
+  if (footerChips.length) {
+    footerChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        openBookingModal({
+          pickup: chip.dataset.from,
+          drop: chip.dataset.to,
+          tripType: 'Outstation'
+        });
+      });
+    });
+  }
 }
 
 /* ==========================================================================
