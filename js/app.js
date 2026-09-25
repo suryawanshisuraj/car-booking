@@ -204,7 +204,7 @@ function initHeroBookingForm() {
     const tripType = tripTypeInput ? tripTypeInput.value : 'One Way';
 
     if (!customerName || !phone || !pickupLocation || !dropLocation || !date || !time) {
-      showToast('⚠️ Please fill in all booking details.', 'warning');
+      showToast('Please fill in all booking details.', 'warning');
       return;
     }
 
