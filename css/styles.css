@@ -137,21 +137,22 @@ input, select, textarea {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-  color: #0f172a;
-  box-shadow: 0 4px 16px var(--primary-glow);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--primary-glow);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
 }
 
 .btn-light {
   background: rgba(255, 255, 255, 0.95);
   color: var(--secondary);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
 }
 
@@ -164,13 +165,14 @@ input, select, textarea {
 .btn-dark {
   background: var(--secondary);
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-dark:hover {
-  background: #000000;
-  color: var(--primary);
+  background: #16203d;
+  color: #60a5fa;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(11, 19, 41, 0.3);
 }
 
 .btn-whatsapp {
