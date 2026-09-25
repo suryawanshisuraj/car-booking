@@ -1597,10 +1597,23 @@ input, select, textarea {
   right: 0;
   background: rgba(15, 23, 42, 0.96);
   backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+/* ==========================================================================
+   Mobile Actions Bar (Bottom Sticky - Light Theme)
+   ========================================================================== */
+.mobile-actions {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid #e2e8f0;
   padding: 8px 12px;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  justify-content: space-around;
+  gap: 10px;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
 }
 
 .mobile-actions a {
@@ -1610,7 +1623,7 @@ input, select, textarea {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  color: #ffffff;
+  color: #0f172a;
   font-size: 0.76rem;
   font-weight: 700;
   padding: 8px 6px;
@@ -1619,21 +1632,21 @@ input, select, textarea {
 }
 
 .mobile-actions a:nth-child(1) {
-  color: #fde047;
+  color: #d97706;
 }
 
 .mobile-actions a:nth-child(2) {
-  color: #25d366;
+  color: #16a34a;
 }
 
 .mobile-actions a:nth-child(3) {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-  color: #0f172a;
+  color: #ffffff;
   border-radius: var(--radius-md);
 }
 
 /* ==========================================================================
-   Modal Dialog (Accessible Native Dialog with light dismiss)
+   Modal Dialog (Accessible Native Dialog with light dismiss - Light Theme)
    ========================================================================== */
 dialog#booking-modal {
   border: none;
@@ -1642,48 +1655,50 @@ dialog#booking-modal {
   max-width: 580px;
   width: 92%;
   margin: auto;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
   background: #ffffff;
   color: var(--text-main);
   overflow: hidden;
 }
 
 dialog#booking-modal::backdrop {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
 }
 
 .modal-header {
-  background: var(--secondary);
-  color: #ffffff;
+  background: #ffffff;
+  color: #0f172a;
   padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--border);
 }
 
 .modal-header h3 {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #0f172a;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .modal-close-btn {
-  color: #cbd5e1;
-  font-size: 1.4rem;
-  padding: 4px;
+  color: #64748b;
+  background: #f1f5f9;
+  font-size: 1.2rem;
+  padding: 4px 8px;
   line-height: 1;
   border-radius: 6px;
   transition: all var(--transition-fast);
 }
 
 .modal-close-btn:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  color: #0f172a;
+  background: #e2e8f0;
 }
 
 .modal-body {
@@ -1708,13 +1723,14 @@ dialog#booking-modal::backdrop {
   font-weight: 700;
   cursor: pointer;
   background: #f8fafc;
+  color: #475569;
   transition: all var(--transition-fast);
 }
 
 .trip-type-option.active {
   border-color: var(--primary);
   background: var(--primary-light);
-  color: var(--secondary);
+  color: var(--primary-dark);
 }
 
 /* Toast Notifications */
