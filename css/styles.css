@@ -1033,14 +1033,23 @@ input, select, textarea {
 }
 
 .service-icon {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  background: var(--primary-light);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
   border-radius: var(--radius-md);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  margin-bottom: 20px;
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--primary);
+  stroke-width: 2;
 }
 
 .service-card h3 {
