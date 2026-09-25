@@ -1221,95 +1221,364 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   Routes Section (Enhanced)
+   Express Highway Corridors Section (High-Tech Transit Corridor Cards)
    ========================================================================== */
-.routes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 24px;
+.corridors-section {
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-.route-card {
+.corridor-filter-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+}
+
+.corridor-tab {
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.corridor-tab:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+.corridor-tab.active {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.corridors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 26px;
+  margin-bottom: 40px;
+}
+
+.corridor-card {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 1.5px solid #e2e8f0;
   padding: 24px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
   transition: all var(--transition-base);
   position: relative;
+  overflow: hidden;
 }
 
-.route-card:hover {
+.corridor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #16a34a);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.corridor-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(245, 158, 11, 0.4);
+  border-color: #93c5fd;
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
 }
 
-.route-header {
+.corridor-card:hover::before {
+  opacity: 1;
+}
+
+.corridor-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #e2e8f0;
 }
 
-.route-tag {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: var(--primary-light);
-  color: var(--primary-dark);
-  padding: 3px 10px;
+.corridor-highway {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
 }
 
-.route-destination {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--secondary);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.route-destination svg {
-  color: var(--primary);
+.corridor-highway svg {
+  color: #2563eb;
   flex-shrink: 0;
 }
 
-.route-details {
-  display: flex;
-  gap: 16px;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  margin-bottom: 20px;
+.corridor-popular-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #15803d;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.route-pricing {
+/* Transit Path Visualizer */
+.corridor-transit {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-alt);
-  padding: 12px 16px;
+  gap: 12px;
+  margin-bottom: 16px;
+  background: #f8fafc;
+  padding: 14px 16px;
   border-radius: var(--radius-md);
-  margin-bottom: 18px;
+  border: 1px solid #f1f5f9;
 }
 
-.route-price-label {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+.transit-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  max-width: 110px;
+  text-align: center;
+}
+
+.transit-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+}
+
+.origin-dot {
+  background: #eff6ff;
+  border: 2px solid #2563eb;
+  position: relative;
+}
+
+.origin-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.dest-dot {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 2px solid #16a34a;
+}
+
+.transit-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.transit-track {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  padding: 0 4px;
+}
+
+.transit-line {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #94a3b8 0, #94a3b8 6px, transparent 6px, transparent 10px);
+}
+
+.transit-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.transit-metric-pill .sep {
+  color: #cbd5e1;
+}
+
+.corridor-stops {
+  font-size: 0.8rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stops-label {
+  color: #64748b;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.stops-val {
+  color: #334155;
   font-weight: 600;
 }
 
-.route-price-val {
+/* Dual Vehicle Fare Matrix */
+.corridor-pricing-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pricing-box {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.pricing-box:hover {
+  border-color: #2563eb;
+  background: #fafcff;
+}
+
+.vehicle-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.vehicle-fare {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  color: var(--secondary);
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.vehicle-meta-mini {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.btn-route-book {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.btn-book-sedan {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-book-sedan:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.btn-book-suv {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.btn-book-suv:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.corridor-footer-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.corridor-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.corridor-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.corridor-trust-item svg {
+  color: #16a34a;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
