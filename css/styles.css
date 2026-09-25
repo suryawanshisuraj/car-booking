@@ -4,38 +4,38 @@
    ========================================================================== */
 
 :root {
-  /* Fresh Modern Theme: Royal Sapphire & Obsidian Gold */
+  /* Modern Executive Light Theme: Pearl White, Crisp Slate & Royal Sapphire */
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
   --primary-dark: #1e40af;
   --primary-light: #eff6ff;
-  --primary-glow: rgba(37, 99, 235, 0.35);
+  --primary-glow: rgba(37, 99, 235, 0.22);
 
-  --accent-gold: #f59e0b;
-  --accent-gold-hover: #d97706;
+  --accent-gold: #d97706;
+  --accent-gold-hover: #b45309;
   --accent-gold-light: #fef3c7;
   --accent-cyan: #0284c7;
 
-  --secondary: #0b1329;
-  --secondary-light: #16203d;
-  --secondary-muted: #334155;
+  --secondary: #0f172a;
+  --secondary-light: #1e293b;
+  --secondary-muted: #475569;
 
-  --whatsapp: #25d366;
-  --whatsapp-hover: #20ba5a;
-  --whatsapp-glow: rgba(37, 211, 102, 0.35);
+  --whatsapp: #16a34a;
+  --whatsapp-hover: #15803d;
+  --whatsapp-glow: rgba(22, 163, 74, 0.25);
 
   --text-main: #0f172a;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
+  --text-muted: #475569;
+  --text-light: #64748b;
   --text-white: #ffffff;
 
   --bg-page: #f8fafc;
   --bg-surface: #ffffff;
   --bg-alt: #f1f5f9;
-  --bg-dark: #070c18;
+  --bg-dark: #0f172a;
 
   --border: #e2e8f0;
-  --border-subtle: #edf2f7;
+  --border-subtle: #f1f5f9;
   --border-focus: #2563eb;
 
   --radius-sm: 8px;
@@ -44,10 +44,10 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.09);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-xl: 0 20px 45px rgba(15, 23, 42, 0.1);
   --shadow-primary: 0 8px 24px var(--primary-glow);
   --shadow-wa: 0 8px 24px var(--whatsapp-glow);
 
