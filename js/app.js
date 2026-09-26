@@ -221,12 +221,11 @@ function initHeroBookingForm() {
 }
 
 /* ==========================================================================
-   4. Express Highway Corridors Section & Footer Quick Links
+   4. Express Highway Corridors Section
    ========================================================================== */
 function initPopularRoutes() {
   const routesContainer = document.getElementById('popular-routes-list');
   const filterTabs = document.querySelectorAll('.corridor-tab');
-  const footerChips = document.querySelectorAll('.footer-chip');
 
   let currentFilter = 'all';
 
@@ -312,19 +311,6 @@ function initPopularRoutes() {
 
   // Initial render
   renderCorridors('all');
-
-  // Handle footer quick corridor chips
-  if (footerChips.length) {
-    footerChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        openBookingModal({
-          pickup: chip.dataset.from,
-          drop: chip.dataset.to,
-          tripType: 'Outstation'
-        });
-      });
-    });
-  }
 }
 
 /* ==========================================================================
