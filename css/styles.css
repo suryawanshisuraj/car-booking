@@ -529,8 +529,8 @@ input, select, textarea {
   align-items: center;
   gap: 8px;
   font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.86rem;
+  font-weight: 750;
   letter-spacing: 1.5px;
   color: var(--primary);
   text-transform: uppercase;
@@ -541,8 +541,9 @@ input, select, textarea {
   background: #eff6ff;
   color: #1d4ed8;
   border: 1px solid #dbeafe;
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: var(--radius-sm);
+  font-size: 0.84rem;
 }
 
 .hero-eyebrow span {
@@ -555,8 +556,8 @@ input, select, textarea {
 
 .hero-content h1 {
   font-family: var(--font-heading);
-  font-size: 3.3rem;
-  line-height: 1.12;
+  font-size: clamp(2.4rem, 5.2vw, 3.5rem);
+  line-height: 1.15;
   font-weight: 800;
   letter-spacing: -1.2px;
   color: #0f172a;
@@ -570,11 +571,12 @@ input, select, textarea {
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  font-size: 1.22rem;
+  font-weight: 500;
   color: #475569;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 28px;
-  max-width: 520px;
+  max-width: 560px;
 }
 
 .hero-actions {
@@ -582,6 +584,11 @@ input, select, textarea {
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 32px;
+}
+
+.hero-actions .btn {
+  font-size: 1.05rem;
+  padding: 14px 26px;
 }
 
 .btn-light {
