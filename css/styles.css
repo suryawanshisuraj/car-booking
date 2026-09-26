@@ -206,8 +206,8 @@ input, select, textarea {
 .top-bar {
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  padding: 8px 0;
-  font-size: 0.8rem;
+  padding: 9px 0;
+  font-size: 0.88rem;
   color: #475569;
   position: relative;
   z-index: 101;
@@ -235,10 +235,10 @@ input, select, textarea {
   background: #f0fdf4;
   color: #15803d;
   border: 1px solid #bbf7d0;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.72rem;
+  font-weight: 750;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -253,8 +253,8 @@ input, select, textarea {
 
 .top-bar-route {
   color: #475569;
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.86rem;
+  font-weight: 600;
 }
 
 .top-bar-right {
@@ -269,7 +269,8 @@ input, select, textarea {
   align-items: center;
   gap: 6px;
   color: #0f172a;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   transition: color var(--transition-fast);
 }
 
@@ -284,10 +285,10 @@ input, select, textarea {
   background: #f0fdf4;
   color: #16a34a;
   border: 1px solid #bbf7d0;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.75rem;
+  font-weight: 750;
+  font-size: 0.84rem;
   transition: all var(--transition-fast);
 }
 
@@ -339,8 +340,8 @@ input, select, textarea {
 }
 
 .logo-mark {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -365,7 +366,7 @@ input, select, textarea {
 
 .logo-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0f172a;
   letter-spacing: -0.3px;
@@ -373,7 +374,7 @@ input, select, textarea {
 }
 
 .logo-subtitle {
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
   color: var(--accent-gold);
   letter-spacing: 1.4px;
@@ -392,9 +393,9 @@ input, select, textarea {
 
 .nav-links a:not(.btn) {
   color: #334155;
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 7px 15px;
+  font-size: 0.95rem;
+  font-weight: 650;
+  padding: 8px 16px;
   border-radius: 6px;
   transition: all var(--transition-fast);
 }
@@ -421,9 +422,9 @@ input, select, textarea {
   align-items: center;
   gap: 6px;
   color: #0f172a;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  padding: 8px 14px;
+  padding: 9px 16px;
   border-radius: 6px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -444,8 +445,9 @@ input, select, textarea {
 }
 
 .nav-book {
-  padding: 9px 20px;
-  font-size: 0.88rem;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
   border-radius: 6px;
   white-space: nowrap;
 }
