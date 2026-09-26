@@ -1564,16 +1564,16 @@ input, select, textarea {
 
 .feature h4 {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 750;
   color: var(--secondary);
   margin-bottom: 4px;
 }
 
 .feature p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .testimonials-stack {
@@ -1599,7 +1599,7 @@ input, select, textarea {
   border: 1px solid #dbeafe;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 750;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -1612,14 +1612,14 @@ input, select, textarea {
 
 .fleet-compliance-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 750;
   color: var(--text-main);
   margin-bottom: 10px;
 }
 
 .fleet-compliance-card p {
-  font-size: 0.94rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 22px;
@@ -1638,9 +1638,9 @@ input, select, textarea {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   color: #334155;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .compliance-checklist li svg {
@@ -1661,7 +1661,7 @@ input, select, textarea {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-sm);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #475569;
 }
 
@@ -1720,8 +1720,8 @@ input, select, textarea {
 
 .google-reviews-info h3 {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 750;
   color: var(--secondary);
   margin-bottom: 8px;
 }
@@ -1741,9 +1741,14 @@ input, select, textarea {
 
 .google-reviews-info p {
   color: var(--text-muted);
-  font-size: 0.96rem;
-  line-height: 1.6;
+  font-size: 1.12rem;
+  line-height: 1.65;
   margin-bottom: 24px;
+}
+
+.google-reviews-info .btn {
+  font-size: 1.02rem;
+  padding: 13px 22px;
 }
 
 /* ==========================================================================
