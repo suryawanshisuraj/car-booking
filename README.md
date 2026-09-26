@@ -1,6 +1,6 @@
-# Jay Bhavani Tours and Travels
+# Vijay Tours and Travels
 
-A modern, responsive, and performance-optimized cab booking website built for **Jay Bhavani Tours and Travels** (Mumbai, Navi Mumbai, and surrounding regions).
+A modern, responsive, and performance-optimized cab booking website built for **Vijay Tours and Travels** (Mumbai, Navi Mumbai, and surrounding regions).
 
 ---
 
@@ -15,13 +15,13 @@ A modern, responsive, and performance-optimized cab booking website built for **
   - Filterable fleet tabs (**Sedan**, **SUV**, **SUV Plus**).
   - High-definition showroom visuals of Swift Dzire, Hyundai Aura, Maruti Ertiga, and Toyota Innova Crysta.
   - One-click vehicle booking trigger.
-- **Intercity Route Pricing**:
+- **Intercity Routes**:
   - Direct routes covering Mumbai to Pune, Shirdi, Nashik, Lonavala, Mahabaleshwar, and Airport transfers.
 - **Native Accessible Booking Modal**:
   - Built using HTML5 `<dialog closedby="any">` with light-dismiss backdrop support.
   - Trip type selection (One Way, Round Trip, Airport Transfer, Local 8hr/80km package).
 - **Google Reviews & Map Embed**:
-  - Integrated official Google Maps embed for Jay Bhavani Tours and Travels.
+  - Integrated official Google Maps embed for Vijay Tours and Travels.
   - Direct links to Google Business profile, reviews, and star ratings.
 - **Mobile First Design**:
   - Responsive hamburger drawer navigation.
