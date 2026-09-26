@@ -1,4 +1,4 @@
-// Fleet and Route data for Jay Bhavani Tours and Travels
+// Fleet and Route data for Vijay Tours and Travels
 export const fleetData = {
   sedan: [
     {
