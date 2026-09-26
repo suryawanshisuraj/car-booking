@@ -815,7 +815,7 @@ input, select, textarea {
 
 .trip-pill {
   padding: 8px 6px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #f8fafc;
   border: 1.5px solid #e2e8f0;
   color: #475569;
@@ -834,10 +834,10 @@ input, select, textarea {
 }
 
 .trip-pill.active {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1d4ed8;
   color: #ffffff;
-  border-color: #2563eb;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
   transform: translateY(-1px);
 }
 
