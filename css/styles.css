@@ -925,7 +925,7 @@ input, select, textarea {
 
 .stats-grid b {
   font-family: var(--font-heading);
-  font-size: 2.3rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: var(--secondary);
   line-height: 1.1;
@@ -935,7 +935,7 @@ input, select, textarea {
 }
 
 .stats-grid span {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   font-weight: 600;
   margin-top: 4px;
@@ -960,7 +960,7 @@ input, select, textarea {
 
 .section-title h2 {
   font-family: var(--font-heading);
-  font-size: 2.4rem;
+  font-size: clamp(2.1rem, 4vw, 2.7rem);
   font-weight: 800;
   color: var(--secondary);
   letter-spacing: -0.8px;
@@ -968,7 +968,7 @@ input, select, textarea {
 }
 
 .section-title p {
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   color: var(--text-muted);
 }
 
@@ -1040,14 +1040,14 @@ input, select, textarea {
 
 .service-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 750;
   color: var(--secondary);
   margin-bottom: 12px;
 }
 
 .service-card p {
-  font-size: 0.94rem;
+  font-size: 1.06rem;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 24px;
@@ -1059,7 +1059,7 @@ input, select, textarea {
   align-items: center;
   gap: 6px;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   color: var(--primary-dark);
 }
 
@@ -1080,8 +1080,8 @@ input, select, textarea {
 }
 
 .fleet-tab {
-  padding: 10px 22px;
-  font-size: 0.95rem;
+  padding: 11px 24px;
+  font-size: 1.02rem;
   font-weight: 700;
   border-radius: 6px;
   background: #ffffff;
