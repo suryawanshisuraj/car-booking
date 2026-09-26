@@ -99,9 +99,7 @@ export const popularRoutes = [
     to: "Pune",
     place: "Pune",
     distance: "150 km",
-    duration: "3 hrs",
-    sedanFare: "₹2,200",
-    suvFare: "₹3,200"
+    duration: "3 hrs"
   },
   {
     id: "mumbai-shirdi",
@@ -109,9 +107,7 @@ export const popularRoutes = [
     to: "Shirdi",
     place: "Shirdi",
     distance: "245 km",
-    duration: "4.5 hrs",
-    sedanFare: "₹3,800",
-    suvFare: "₹5,200"
+    duration: "4.5 hrs"
   },
   {
     id: "mumbai-airport",
@@ -119,9 +115,7 @@ export const popularRoutes = [
     to: "Mumbai Airport",
     place: "Airport",
     distance: "Direct Transfer",
-    duration: "On-Time Drop",
-    sedanFare: "₹1,200",
-    suvFare: "₹1,800"
+    duration: "On-Time Drop"
   },
   {
     id: "mumbai-nashik",
@@ -129,9 +123,7 @@ export const popularRoutes = [
     to: "Nashik",
     place: "Nashik",
     distance: "165 km",
-    duration: "3.5 hrs",
-    sedanFare: "₹3,000",
-    suvFare: "₹4,200"
+    duration: "3.5 hrs"
   },
   {
     id: "mumbai-lonavala",
@@ -139,9 +131,7 @@ export const popularRoutes = [
     to: "Lonavala",
     place: "Lonavala",
     distance: "85 km",
-    duration: "2 hrs",
-    sedanFare: "₹2,000",
-    suvFare: "₹2,800"
+    duration: "2 hrs"
   },
   {
     id: "mumbai-mahabaleshwar",
@@ -149,9 +139,7 @@ export const popularRoutes = [
     to: "Mahabaleshwar",
     place: "Mahabaleshwar",
     distance: "260 km",
-    duration: "5.5 hrs",
-    sedanFare: "₹4,500",
-    suvFare: "₹6,000"
+    duration: "5.5 hrs"
   },
   {
     id: "mumbai-alibaug",
@@ -159,9 +147,7 @@ export const popularRoutes = [
     to: "Alibaug",
     place: "Alibaug",
     distance: "95 km",
-    duration: "2.5 hrs",
-    sedanFare: "₹2,400",
-    suvFare: "₹3,400"
+    duration: "2.5 hrs"
   },
   {
     id: "pune-mumbai-airport",
@@ -169,9 +155,7 @@ export const popularRoutes = [
     to: "Mumbai Airport",
     place: "Airport",
     distance: "160 km",
-    duration: "3 hrs",
-    sedanFare: "₹2,400",
-    suvFare: "₹3,500"
+    duration: "3 hrs"
   }
 ];
 
