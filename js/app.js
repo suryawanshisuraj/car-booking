@@ -390,6 +390,13 @@ function initBookingModal() {
         return;
       }
 
+      const cleanPhone = phone.replace(/\D/g, '');
+      if (cleanPhone.length < 10) {
+        showToast('Please enter a valid 10-digit mobile number.', 'warning');
+        modalForm.modalPhone.focus();
+        return;
+      }
+
       modal.close();
 
       sendBookingToWhatsApp({
