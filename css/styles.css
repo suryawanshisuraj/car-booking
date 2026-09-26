@@ -689,8 +689,8 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 750;
   letter-spacing: 0.8px;
   color: #15803d;
   text-transform: uppercase;
@@ -704,11 +704,11 @@ input, select, textarea {
 }
 
 .badge-discount {
-  font-size: 0.74rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 750;
   color: #1d4ed8;
   background: #eff6ff;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
   border: 1px solid #bfdbfe;
 }
@@ -743,16 +743,16 @@ input, select, textarea {
 
 .big-btn-copy h3 {
   font-family: var(--font-heading);
-  font-size: 1.28rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.2;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   letter-spacing: -0.3px;
 }
 
 .big-btn-copy p {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: #64748b;
   line-height: 1.35;
   margin: 0;
@@ -808,13 +808,13 @@ input, select, textarea {
 }
 
 .trip-pill {
-  padding: 8px 6px;
+  padding: 9px 8px;
   border-radius: 6px;
   background: #f8fafc;
   border: 1.5px solid #e2e8f0;
   color: #475569;
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 750;
   cursor: pointer;
   text-align: center;
   transition: all var(--transition-fast);
@@ -846,7 +846,7 @@ input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #334155;
 }
@@ -860,13 +860,13 @@ input, select, textarea {
 
 #hero-booking-form input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 11px 14px;
   border-radius: var(--radius-md);
   border: 1.5px solid #e2e8f0;
   background: #f8fafc;
   color: var(--text-main);
   outline: none;
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   transition: all var(--transition-fast);
 }
 
@@ -884,9 +884,9 @@ input, select, textarea {
 
 .big-whatsapp-submit {
   margin-top: 6px;
-  padding: 14px 20px;
-  font-size: 0.98rem;
-  font-weight: 700;
+  padding: 15px 22px;
+  font-size: 1.06rem;
+  font-weight: 750;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
   color: #ffffff;
