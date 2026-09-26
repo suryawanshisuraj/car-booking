@@ -1,5 +1,5 @@
 /**
- * Auto-Sync Watcher for Jay Bhavani Tours and Travels
+ * Auto-Sync Watcher for Vijay Tours and Travels
  * Repository: https://github.com/suryawanshisuraj/car-booking
  * 
  * Automatically detects any file modifications, commits them, and pushes to GitHub.
@@ -117,7 +117,7 @@ function syncFolders() {
 }
 
 console.log('===============================================================');
-console.log('  🚕 JAY BHAVANI TOURS AND TRAVELS - GITHUB AUTO-SYNC WATCHER');
+console.log('  🚕 VIJAY TOURS AND TRAVELS - GITHUB AUTO-SYNC WATCHER');
 console.log('===============================================================');
 console.log(`📍 Repository: ${REPO_URL}`);
 console.log(`🔧 Git Binary: ${gitExe}`);
