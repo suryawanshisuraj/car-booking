@@ -129,7 +129,7 @@ function renderFleet(categoryKey) {
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/></svg>
             AC
           </span>
-          <span style="margin-left: auto; color: var(--primary-dark); font-weight: 700;">${vehicle.ratePerKm}</span>
+          <span style="margin-left: auto; color: var(--primary-dark); font-weight: 600; font-size: 0.85rem;">24/7 Available</span>
         </div>
         <button type="button" class="btn btn-dark full book-vehicle-btn" data-vehicle="${vehicle.name}" data-category="${vehicle.category}">
           Book ${vehicle.name}
@@ -267,29 +267,20 @@ function initPopularRoutes() {
           </div>
         </div>
 
-        <!-- Vehicle Fare Options -->
-        <div class="corridor-pricing-matrix">
-          <div class="pricing-box sedan-box">
-            <div class="vehicle-title">Sedan</div>
-            <div class="vehicle-fare">${route.sedanFare}</div>
-            <button type="button" class="btn btn-route-book btn-book-sedan" 
-                    data-from="${route.from}" 
-                    data-to="${route.to}" 
-                    data-vehicle="Swift Dzire">
-              Book Sedan
-            </button>
-          </div>
-
-          <div class="pricing-box suv-box">
-            <div class="vehicle-title">SUV</div>
-            <div class="vehicle-fare">${route.suvFare}</div>
-            <button type="button" class="btn btn-route-book btn-book-suv" 
-                    data-from="${route.from}" 
-                    data-to="${route.to}" 
-                    data-vehicle="Maruti Ertiga">
-              Book SUV
-            </button>
-          </div>
+        <!-- Vehicle Booking Actions (No Prices) -->
+        <div class="corridor-actions">
+          <button type="button" class="btn btn-book-sedan btn-route-book" 
+                  data-from="${route.from}" 
+                  data-to="${route.to}" 
+                  data-vehicle="Swift Dzire">
+            Book Sedan
+          </button>
+          <button type="button" class="btn btn-book-suv btn-route-book" 
+                  data-from="${route.from}" 
+                  data-to="${route.to}" 
+                  data-vehicle="Maruti Ertiga">
+            Book SUV
+          </button>
         </div>
       </div>
     `).join('');
