@@ -228,26 +228,22 @@ function initPopularRoutes() {
   const filterTabs = document.querySelectorAll('.corridor-tab');
   const footerChips = document.querySelectorAll('.footer-chip');
 
-  let currentCategory = 'all';
+  let currentFilter = 'all';
 
-  function renderCorridors(category = 'all') {
+  function renderCorridors(filter = 'all') {
     if (!routesContainer) return;
 
-    const filtered = category === 'all' 
+    const filtered = filter === 'all' 
       ? popularRoutes 
-      : popularRoutes.filter(r => r.category === category);
+      : popularRoutes.filter(r => 
+          (r.place && r.place.toLowerCase() === filter.toLowerCase()) ||
+          r.to.toLowerCase().includes(filter.toLowerCase()) ||
+          r.from.toLowerCase().includes(filter.toLowerCase())
+        );
 
     routesContainer.innerHTML = filtered.map(route => `
-      <div class="corridor-card" data-category="${route.category}">
-        <div class="corridor-header">
-          <div class="corridor-highway">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-            <span>${route.via}</span>
-          </div>
-          ${route.popular ? '<span class="corridor-popular-badge">Popular Corridor</span>' : ''}
-        </div>
-
-        <!-- Visual Route Transit Path -->
+      <div class="corridor-card" data-place="${(route.place || route.to).toLowerCase()}">
+        <!-- Visual Route Transit Path with Place Names -->
         <div class="corridor-transit">
           <div class="transit-point origin">
             <div class="transit-dot origin-dot"></div>
@@ -271,18 +267,11 @@ function initPopularRoutes() {
           </div>
         </div>
 
-        ${route.stops ? `
-        <div class="corridor-stops">
-          <span class="stops-label">En-route Highlights:</span>
-          <span class="stops-val">${route.stops}</span>
-        </div>` : ''}
-
-        <!-- Dual Vehicle Fare Comparison Matrix -->
+        <!-- Vehicle Fare Options -->
         <div class="corridor-pricing-matrix">
           <div class="pricing-box sedan-box">
-            <div class="vehicle-title">Sedan (${route.sedanModel || 'Dzire/Aura'})</div>
+            <div class="vehicle-title">Sedan</div>
             <div class="vehicle-fare">${route.sedanFare}</div>
-            <div class="vehicle-meta-mini">4 Seats • 2 Bags • AC</div>
             <button type="button" class="btn btn-route-book btn-book-sedan" 
                     data-from="${route.from}" 
                     data-to="${route.to}" 
@@ -292,9 +281,8 @@ function initPopularRoutes() {
           </div>
 
           <div class="pricing-box suv-box">
-            <div class="vehicle-title">SUV (${route.suvModel || 'Ertiga/Crysta'})</div>
+            <div class="vehicle-title">SUV</div>
             <div class="vehicle-fare">${route.suvFare}</div>
-            <div class="vehicle-meta-mini">6-7 Seats • 4 Bags • AC</div>
             <button type="button" class="btn btn-route-book btn-book-suv" 
                     data-from="${route.from}" 
                     data-to="${route.to}" 
@@ -302,14 +290,6 @@ function initPopularRoutes() {
               Book SUV
             </button>
           </div>
-        </div>
-
-        <div class="corridor-footer-guarantee">
-          <span>✓ Fixed Upfront Fare</span>
-          <span>•</span>
-          <span>✓ Verified Chauffeur</span>
-          <span>•</span>
-          <span>✓ Toll Assistance</span>
         </div>
       </div>
     `).join('');
@@ -327,14 +307,14 @@ function initPopularRoutes() {
     });
   }
 
-  // Handle category filter tabs
+  // Handle place filter tabs
   if (filterTabs.length) {
     filterTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         filterTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        currentCategory = tab.dataset.filter || 'all';
-        renderCorridors(currentCategory);
+        currentFilter = tab.dataset.filter || 'all';
+        renderCorridors(currentFilter);
       });
     });
   }
