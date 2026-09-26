@@ -52,6 +52,6 @@
   <polygon points="70,22 72.5,27 78,27 73.5,30.5 75,36 70,32.5 65,36 66.5,30.5 62,27 67.5,27" fill="url(#goldAccent)" />
 
   <!-- Brand Typography -->
-  <text x="70" y="102" font-family="'Outfit', 'Montserrat', sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">JAY BHAVANI</text>
+  <text x="70" y="102" font-family="'Outfit', 'Montserrat', sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3.5">VIJAY</text>
   <text x="70" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="700" fill="url(#goldAccent)" text-anchor="middle" letter-spacing="2">TOURS &amp; TRAVELS</text>
 </svg>
