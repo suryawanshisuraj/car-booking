@@ -5,11 +5,11 @@
 
 :root {
   /* Modern Executive Light Theme: Pearl White, Crisp Slate & Royal Sapphire */
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --primary-dark: #1e40af;
-  --primary-light: #eff6ff;
-  --primary-glow: rgba(37, 99, 235, 0.22);
+  --primary: #c2410c;
+  --primary-hover: #9a3412;
+  --primary-dark: #7c2d12;
+  --primary-light: #fff7ed;
+  --primary-glow: rgba(194, 65, 12, 0.22);
 
   --accent-gold: #d97706;
   --accent-gold-hover: #b45309;
@@ -29,14 +29,14 @@
   --text-light: #64748b;
   --text-white: #ffffff;
 
-  --bg-page: #f8fafc;
+  --bg-page: #faf8f5;
   --bg-surface: #ffffff;
-  --bg-alt: #f1f5f9;
+  --bg-alt: #f3efe9;
   --bg-dark: #0f172a;
 
-  --border: #e2e8f0;
-  --border-subtle: #f1f5f9;
-  --border-focus: #2563eb;
+  --border: #e8e3da;
+  --border-subtle: #f2ede6;
+  --border-focus: #c2410c;
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -44,10 +44,10 @@
   --radius-xl: 24px;
   --radius-full: 6px;
 
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --shadow-xl: 0 20px 45px rgba(15, 23, 42, 0.1);
+  --shadow-sm: 0 1px 3px rgba(45, 35, 25, 0.05);
+  --shadow-md: 0 4px 16px rgba(45, 35, 25, 0.06);
+  --shadow-lg: 0 10px 30px rgba(45, 35, 25, 0.08);
+  --shadow-xl: 0 20px 45px rgba(45, 35, 25, 0.1);
   --shadow-primary: 0 8px 24px var(--primary-glow);
   --shadow-wa: 0 8px 24px var(--whatsapp-glow);
 
@@ -154,16 +154,16 @@ input, select, textarea {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #c2410c 0%, #b45309 100%);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 16px rgba(194, 65, 12, 0.35);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #9a3412 100%);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 8px 24px rgba(194, 65, 12, 0.45);
 }
 
 .btn-light {
@@ -329,7 +329,7 @@ input, select, textarea {
   border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: var(--radius-md);
   padding: 8px 18px 8px 14px;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px rgba(45, 35, 25, 0.06), 0 1px 3px rgba(45, 35, 25, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -339,7 +339,7 @@ input, select, textarea {
 
 .navbar.scrolled .nav-inner {
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(45, 35, 25, 0.08);
   border-color: #cbd5e1;
 }
 
@@ -418,8 +418,8 @@ input, select, textarea {
 
 .nav-links a.active:not(.btn) {
   color: #ffffff;
-  background: #1d4ed8;
-  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+  background: #c2410c;
+  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.25);
 }
 
 .nav-actions-desktop {
@@ -439,7 +439,7 @@ input, select, textarea {
   border-radius: 6px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 1px 3px rgba(45, 35, 25, 0.05);
   transition: all var(--transition-fast);
   white-space: nowrap;
 }
@@ -447,7 +447,7 @@ input, select, textarea {
 .btn-nav-call:hover {
   background: #f8fafc;
   border-color: #cbd5e1;
-  color: #2563eb;
+  color: #c2410c;
   transform: translateY(-1px);
 }
 
@@ -511,9 +511,9 @@ input, select, textarea {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(248, 250, 252, 0.97) 0%,
-    rgba(248, 250, 252, 0.92) 50%,
-    rgba(248, 250, 252, 0.78) 100%
+    rgba(250, 248, 245, 0.97) 0%,
+    rgba(250, 248, 245, 0.92) 50%,
+    rgba(250, 248, 245, 0.78) 100%
   );
   z-index: 2;
 }
@@ -549,9 +549,9 @@ input, select, textarea {
 }
 
 .hero-eyebrow {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid #dbeafe;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
   padding: 6px 16px;
   border-radius: var(--radius-sm);
   font-size: 0.84rem;
@@ -576,7 +576,7 @@ input, select, textarea {
 }
 
 .hero-content h1 strong {
-  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #c2410c 0%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -606,13 +606,13 @@ input, select, textarea {
   background: #ffffff;
   color: #0f172a;
   border: 1.5px solid #e2e8f0;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 6px rgba(45, 35, 25, 0.05);
 }
 
 .btn-light:hover {
   background: #f8fafc;
   border-color: #cbd5e1;
-  color: #2563eb;
+  color: #c2410c;
 }
 
 
@@ -630,7 +630,7 @@ input, select, textarea {
   width: 24px;
   height: 4px;
   border-radius: 2px;
-  background: rgba(15, 23, 42, 0.2);
+  background: rgba(45, 35, 25, 0.2);
   transition: all var(--transition-base);
   cursor: pointer;
 }
@@ -648,7 +648,7 @@ input, select, textarea {
   color: var(--text-main);
   border-radius: var(--radius-xl);
   padding: 18px;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 20px 45px rgba(45, 35, 25, 0.08), 0 1px 3px rgba(45, 35, 25, 0.04);
   border: 1px solid #e2e8f0;
   position: relative;
   overflow: hidden;
@@ -662,7 +662,7 @@ input, select, textarea {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6, #16a34a);
+  background: linear-gradient(90deg, #c2410c, #d97706, #16a34a);
 }
 
 /* Big Interactive Button Launcher - Light Executive Card */
@@ -674,8 +674,8 @@ input, select, textarea {
   color: #0f172a;
   border-radius: var(--radius-lg);
   padding: 16px 18px;
-  border: 1.5px solid #dbeafe;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.05);
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.05);
   cursor: pointer;
   transition: all var(--transition-smooth);
   position: relative;
@@ -684,8 +684,8 @@ input, select, textarea {
 
 .quick-book-big-btn:hover {
   transform: translateY(-2px);
-  border-color: #93c5fd;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+  border-color: #fdba74;
+  box-shadow: 0 10px 25px rgba(194, 65, 12, 0.12);
 }
 
 .big-btn-top {
@@ -717,8 +717,8 @@ input, select, textarea {
 .badge-discount {
   font-size: 0.82rem;
   font-weight: 750;
-  color: #1d4ed8;
-  background: #eff6ff;
+  color: #c2410c;
+  background: #fff7ed;
   padding: 4px 10px;
   border-radius: 4px;
   border: 1px solid #bfdbfe;
@@ -734,7 +734,7 @@ input, select, textarea {
   width: 50px;
   height: 50px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #c2410c 0%, #b45309 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -786,9 +786,9 @@ input, select, textarea {
 }
 
 .quick-book-big-btn:hover .big-btn-toggle-badge {
-  background: #2563eb;
+  background: #c2410c;
   color: #ffffff;
-  border-color: #2563eb;
+  border-color: #c2410c;
 }
 
 /* Quick Booking Form Wrapper (Smooth Expand / Collapse) */
@@ -839,10 +839,10 @@ input, select, textarea {
 }
 
 .trip-pill.active {
-  background: #1d4ed8;
+  background: #c2410c;
   color: #ffffff;
-  border-color: #1d4ed8;
-  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+  border-color: #c2410c;
+  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.25);
   transform: translateY(-1px);
 }
 
@@ -884,7 +884,7 @@ input, select, textarea {
 #hero-booking-form input:focus {
   border-color: var(--primary);
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
 }
 
 .form-row {
@@ -1021,8 +1021,8 @@ input, select, textarea {
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
-  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 16px 36px rgba(194, 65, 12, 0.12);
+  border-color: rgba(194, 65, 12, 0.35);
 }
 
 .service-card:hover::before {
@@ -1035,10 +1035,10 @@ input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(194, 65, 12, 0.08);
   color: var(--primary);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(194, 65, 12, 0.15);
   margin-bottom: 20px;
 }
 
@@ -1107,10 +1107,10 @@ input, select, textarea {
 }
 
 .fleet-tab.active {
-  background: #1d4ed8;
+  background: #c2410c;
   color: #ffffff;
-  border-color: #1d4ed8;
-  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+  border-color: #c2410c;
+  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.25);
 }
 
 .cards.fleet-results {
@@ -1130,7 +1130,7 @@ input, select, textarea {
 
 .vehicle-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 28px rgba(45, 35, 25, 0.08);
   border-color: rgba(37, 99, 235, 0.4);
 }
 
@@ -1245,7 +1245,7 @@ input, select, textarea {
   font-weight: 750;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 3px rgba(45, 35, 25, 0.04);
 }
 
 .corridor-tab:hover {
@@ -1255,10 +1255,10 @@ input, select, textarea {
 }
 
 .corridor-tab.active {
-  background: #1d4ed8;
+  background: #c2410c;
   color: #ffffff;
-  border-color: #1d4ed8;
-  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+  border-color: #c2410c;
+  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.25);
   transform: translateY(-1px);
 }
 
@@ -1274,7 +1274,7 @@ input, select, textarea {
   border-radius: var(--radius-md);
   border: 1.5px solid #e2e8f0;
   padding: 24px;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 18px rgba(45, 35, 25, 0.04);
   display: flex;
   flex-direction: column;
   transition: all var(--transition-base);
@@ -1289,15 +1289,15 @@ input, select, textarea {
   left: 0;
   right: 0;
   height: 3px;
-  background: #1d4ed8;
+  background: #c2410c;
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
 
 .corridor-card:hover {
   transform: translateY(-3px);
-  border-color: #93c5fd;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  border-color: #fdba74;
+  box-shadow: 0 12px 28px rgba(45, 35, 25, 0.08);
 }
 
 .corridor-card:hover::before {
@@ -1320,15 +1320,15 @@ input, select, textarea {
   gap: 6px;
   font-size: 0.85rem;
   font-weight: 750;
-  color: #1d4ed8;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
+  color: #c2410c;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
   padding: 4px 10px;
   border-radius: 4px;
 }
 
 .corridor-highway svg {
-  color: #2563eb;
+  color: #c2410c;
   flex-shrink: 0;
 }
 
@@ -1378,8 +1378,8 @@ input, select, textarea {
 }
 
 .origin-dot {
-  background: #eff6ff;
-  border: 2px solid #2563eb;
+  background: #fff7ed;
+  border: 2px solid #c2410c;
   position: relative;
 }
 
@@ -1388,7 +1388,7 @@ input, select, textarea {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #2563eb;
+  background: #c2410c;
 }
 
 .dest-dot {
@@ -1432,7 +1432,7 @@ input, select, textarea {
   border: 1px solid #e2e8f0;
   padding: 3px 10px;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 1px 3px rgba(45, 35, 25, 0.05);
 }
 
 .transit-metric-pill .sep {
@@ -1487,20 +1487,20 @@ input, select, textarea {
 
 .btn-book-sedan:hover {
   background: #f8fafc;
-  border-color: #2563eb;
-  color: #2563eb;
+  border-color: #c2410c;
+  color: #c2410c;
 }
 
 .btn-book-suv {
-  background: #1d4ed8;
+  background: #c2410c;
   color: #ffffff;
-  border: 1.5px solid #1d4ed8;
+  border: 1.5px solid #c2410c;
   box-shadow: 0 2px 6px rgba(29, 78, 216, 0.2);
 }
 
 .btn-book-suv:hover {
-  background: #1e40af;
-  border-color: #1e40af;
+  background: #9a3412;
+  border-color: #9a3412;
 }
 
 
@@ -1514,7 +1514,7 @@ input, select, textarea {
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
   padding: 16px 24px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 2px 8px rgba(45, 35, 25, 0.03);
 }
 
 .corridor-trust-item {
@@ -1598,16 +1598,16 @@ input, select, textarea {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 32px 30px;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 20px rgba(45, 35, 25, 0.05);
 }
 
 .compliance-badge-header {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid #dbeafe;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
@@ -1618,7 +1618,7 @@ input, select, textarea {
 }
 
 .compliance-badge-header svg {
-  color: #1d4ed8;
+  color: #c2410c;
 }
 
 .fleet-compliance-card h3 {
@@ -1677,7 +1677,7 @@ input, select, textarea {
 }
 
 .compliance-contact-note svg {
-  color: #2563eb;
+  color: #c2410c;
   flex-shrink: 0;
 }
 
@@ -1766,7 +1766,7 @@ input, select, textarea {
    CTA Section
    ========================================================================== */
 .cta {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);
   color: #ffffff;
   padding: 68px 0;
   box-shadow: 0 12px 36px rgba(37, 99, 235, 0.18);
@@ -1781,7 +1781,7 @@ input, select, textarea {
 }
 
 .cta-inner .eyebrow {
-  color: #93c5fd;
+  color: #fdba74;
 }
 
 .cta-inner h2 {
@@ -1795,7 +1795,7 @@ input, select, textarea {
 
 .cta-inner p {
   font-size: 1.08rem;
-  color: #dbeafe;
+  color: #fed7aa;
 }
 
 /* ==========================================================================
@@ -1831,9 +1831,9 @@ input, select, textarea {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #dbeafe;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -1842,7 +1842,7 @@ input, select, textarea {
 
 .guarantee-card:hover .guarantee-icon {
   transform: translateY(-2px);
-  background: #2563eb;
+  background: #c2410c;
   color: #ffffff;
 }
 
@@ -1873,7 +1873,7 @@ input, select, textarea {
   justify-content: space-between;
   gap: 28px;
   color: #ffffff;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 30px rgba(45, 35, 25, 0.12);
   border: 1px solid #1e293b;
   position: relative;
   overflow: hidden;
@@ -1941,7 +1941,7 @@ input, select, textarea {
 
 .btn-helpline-phone:hover {
   background: #f8fafc;
-  color: #2563eb !important;
+  color: #c2410c !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
@@ -1992,7 +1992,7 @@ input, select, textarea {
   bottom: 0;
   width: 28px;
   height: 2px;
-  background: #2563eb;
+  background: #c2410c;
   border-radius: 2px;
 }
 
@@ -2060,7 +2060,7 @@ input, select, textarea {
 }
 
 .footer-links li a:hover {
-  color: #2563eb;
+  color: #c2410c;
   transform: translateX(4px);
 }
 
@@ -2082,7 +2082,7 @@ input, select, textarea {
 }
 
 .contact-link.highlight {
-  color: #2563eb;
+  color: #c2410c;
   font-size: 1.15rem;
 }
 
@@ -2091,7 +2091,7 @@ input, select, textarea {
 }
 
 .contact-link:hover {
-  color: #1d4ed8;
+  color: #c2410c;
 }
 
 .contact-detail {
@@ -2104,7 +2104,7 @@ input, select, textarea {
 }
 
 .contact-detail svg {
-  color: #2563eb;
+  color: #c2410c;
   flex-shrink: 0;
 }
 
@@ -2174,7 +2174,7 @@ input, select, textarea {
   font-size: 0.74rem;
   font-weight: 600;
   color: #334155;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 2px rgba(45, 35, 25, 0.04);
 }
 
 .safety-text {
@@ -2201,7 +2201,7 @@ input, select, textarea {
   padding: 8px 12px;
   justify-content: space-around;
   gap: 10px;
-  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 -4px 20px rgba(45, 35, 25, 0.08);
 }
 
 .mobile-actions a {
@@ -2243,14 +2243,14 @@ dialog#booking-modal {
   max-width: 580px;
   width: 92%;
   margin: auto;
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
+  box-shadow: 0 25px 60px rgba(45, 35, 25, 0.15);
   background: #ffffff;
   color: var(--text-main);
   overflow: hidden;
 }
 
 dialog#booking-modal::backdrop {
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(45, 35, 25, 0.45);
   backdrop-filter: blur(6px);
 }
 
@@ -2457,7 +2457,7 @@ dialog#booking-modal::backdrop {
     border: 1px solid #e2e8f0;
     transform: translateY(-130%);
     transition: transform var(--transition-base);
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    box-shadow: 0 20px 40px rgba(45, 35, 25, 0.15);
   }
 
   .nav-links.open {
@@ -2705,7 +2705,7 @@ dialog#booking-modal::backdrop {
     border-top: 1px solid var(--border);
     padding: 8px 10px calc(8px + var(--sab));
     gap: 8px;
-    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 -4px 20px rgba(45, 35, 25, 0.08);
   }
 
   .mobile-actions a {
@@ -2789,7 +2789,7 @@ dialog#booking-modal::backdrop {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 44px 40px;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px rgba(45, 35, 25, 0.04);
 }
 
 .legal-section {
@@ -2830,7 +2830,7 @@ dialog#booking-modal::backdrop {
 }
 
 .legal-highlight-box {
-  background: #eff6ff;
+  background: #fff7ed;
   border-left: 4px solid var(--primary);
   border-radius: 4px;
   padding: 16px 20px;
