@@ -68,8 +68,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17.5px;
   -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16.5px;
+  }
 }
 
 body {
@@ -108,7 +114,7 @@ button {
 
 input, select, textarea {
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* Container */
@@ -127,9 +133,9 @@ input, select, textarea {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 12px 22px;
+  font-weight: 650;
+  font-size: 1.02rem;
+  padding: 13px 24px;
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
   text-decoration: none;
