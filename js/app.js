@@ -208,6 +208,13 @@ function initHeroBookingForm() {
       return;
     }
 
+    const cleanPhone = phone.replace(/\D/g, '');
+    if (cleanPhone.length < 10) {
+      showToast('Please enter a valid 10-digit mobile number.', 'warning');
+      form.phone.focus();
+      return;
+    }
+
     sendBookingToWhatsApp({
       customerName,
       phone,
