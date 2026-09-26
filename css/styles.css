@@ -2218,6 +2218,31 @@ input, select, textarea {
 
 .copyright-text {
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.legal-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.legal-nav a {
+  color: #475569;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.legal-nav a:hover {
+  color: var(--primary);
+}
+
+.legal-separator {
+  color: #94a3b8;
 }
 
 .payment-badges {
