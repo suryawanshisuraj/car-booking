@@ -267,29 +267,20 @@ function initPopularRoutes() {
           </div>
         </div>
 
-        <!-- Vehicle Fare Options -->
-        <div class="corridor-pricing-matrix">
-          <div class="pricing-box sedan-box">
-            <div class="vehicle-title">Sedan</div>
-            <div class="vehicle-fare">${route.sedanFare}</div>
-            <button type="button" class="btn btn-route-book btn-book-sedan" 
-                    data-from="${route.from}" 
-                    data-to="${route.to}" 
-                    data-vehicle="Swift Dzire">
-              Book Sedan
-            </button>
-          </div>
-
-          <div class="pricing-box suv-box">
-            <div class="vehicle-title">SUV</div>
-            <div class="vehicle-fare">${route.suvFare}</div>
-            <button type="button" class="btn btn-route-book btn-book-suv" 
-                    data-from="${route.from}" 
-                    data-to="${route.to}" 
-                    data-vehicle="Maruti Ertiga">
-              Book SUV
-            </button>
-          </div>
+        <!-- Vehicle Booking Actions (No Prices) -->
+        <div class="corridor-actions">
+          <button type="button" class="btn btn-book-sedan btn-route-book" 
+                  data-from="${route.from}" 
+                  data-to="${route.to}" 
+                  data-vehicle="Swift Dzire">
+            Book Sedan
+          </button>
+          <button type="button" class="btn btn-book-suv btn-route-book" 
+                  data-from="${route.from}" 
+                  data-to="${route.to}" 
+                  data-vehicle="Maruti Ertiga">
+            Book SUV
+          </button>
         </div>
       </div>
     `).join('');
