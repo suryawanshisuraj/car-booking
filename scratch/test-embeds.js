@@ -1,4 +1,4 @@
-const https = require('https');
+import https from 'node:https';
 
 const urls = [
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120645.2!2d73.0497024!3d19.021824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVIJAY%20TOURS%20AND%20TRAVELS!5e0!3m2!1sen!2sin',
@@ -8,6 +8,6 @@ const urls = [
 
 urls.forEach((url, i) => {
   https.get(url, (res) => {
-    console.log(`URL ${i} (${url.substring(0, 40)}...): status ${res.statusCode}, x-frame-options: ${res.headers['x-frame-options']}`);
+    console.log(`URL ${i}: status ${res.statusCode}, x-frame-options: ${res.headers['x-frame-options']}`);
   }).on('error', e => console.error(i, e.message));
 });
