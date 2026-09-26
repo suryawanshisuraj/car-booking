@@ -57,6 +57,12 @@
 
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Mobile Safe Area Insets */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
 }
 
 /* Base Reset & Typography */
@@ -74,7 +80,7 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 16.5px;
+    font-size: 16px;
   }
 }
 
@@ -84,13 +90,18 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-bottom: 70px; /* Space for mobile sticky action bar */
+  padding-bottom: calc(72px + var(--sab)); /* Space for mobile sticky action bar */
 }
 
 @media (min-width: 801px) {
   body {
     padding-bottom: 0;
   }
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -2395,6 +2406,11 @@ dialog#booking-modal::backdrop {
 }
 
 @media (max-width: 800px) {
+  /* Strict Mobile Input Zoom Prevention (iOS Safari) */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
   .top-bar-route {
     display: none;
   }
@@ -2404,30 +2420,39 @@ dialog#booking-modal::backdrop {
   }
 
   .navbar {
-    top: 8px;
+    top: calc(8px + var(--sat));
     padding: 0 10px;
   }
 
   .nav-inner {
     border-radius: var(--radius-lg);
     padding: 8px 14px;
+    min-height: 52px;
   }
 
   .menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .nav-links {
     position: fixed;
-    top: 66px;
+    top: calc(66px + var(--sat));
     left: 10px;
     right: 10px;
+    max-height: calc(100dvh - 80px - var(--sat) - var(--sab));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 20px;
-    gap: 12px;
+    padding: 18px;
+    gap: 8px;
     border-radius: var(--radius-lg);
     border: 1px solid #e2e8f0;
     transform: translateY(-130%);
@@ -2439,18 +2464,97 @@ dialog#booking-modal::backdrop {
     transform: translateY(0);
   }
 
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.85rem, 6.8vw, 2.45rem);
+    line-height: 1.25;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .booking-card {
+    padding: 22px 16px;
+    border-radius: var(--radius-lg);
+  }
+
   .trip-pill-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .trip-pill {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 0.84rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    min-height: 48px;
+  }
+
+  .btn-submit-booking {
+    min-height: 52px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Horizontal Swipe Rail for Filter Tabs */
+  .fleet-tabs,
+  .corridor-filter-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 2px 10px;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .fleet-tabs::-webkit-scrollbar,
+  .corridor-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fleet-tab,
+  .corridor-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 0.88rem;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
 
   .cards.four {
@@ -2459,28 +2563,72 @@ dialog#booking-modal::backdrop {
 
   .corridors-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .corridor-filter-tabs {
+  .corridor-card {
+    padding: 20px 16px;
+  }
+
+  .corridor-actions {
+    flex-direction: column;
     gap: 8px;
   }
 
-  .corridor-tab {
-    padding: 7px 14px;
-    font-size: 0.8rem;
+  .btn-route-book {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .fleet-card-img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .btn-fleet-book {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Google Map & Reviews on Mobile */
   .google-reviews-panel {
     grid-template-columns: 1fr !important;
+    gap: 18px;
   }
 
   .google-map-card,
   .google-map-card iframe {
-    min-height: 350px !important;
+    min-height: 280px !important;
+    max-height: 350px !important;
   }
 
   .google-reviews-info {
-    padding: 24px !important;
+    padding: 22px 18px !important;
+  }
+
+  .google-reviews-info h3 {
+    font-size: 1.45rem;
+  }
+
+  .google-reviews-info div[style*="display: flex"] {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px !important;
+  }
+
+  .google-reviews-info .btn {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .feature-list {
@@ -2490,24 +2638,40 @@ dialog#booking-modal::backdrop {
   /* Footer Mobile */
   .footer-guarantees-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .footer-helpline-card {
     flex-direction: column;
     text-align: center;
-    padding: 26px 20px;
-    gap: 20px;
+    padding: 24px 16px;
+    gap: 18px;
   }
 
   .helpline-actions {
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
+  }
+
+  .btn-helpline-phone,
+  .btn-helpline-wa {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-directory {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 30px;
+  }
+
+  .footer-links li a {
+    display: inline-block;
+    padding: 6px 0;
+    min-height: 36px;
   }
 
   .footer-bottom-inner {
@@ -2518,6 +2682,8 @@ dialog#booking-modal::backdrop {
 
   .payment-badges {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   .cta-inner {
@@ -2525,12 +2691,49 @@ dialog#booking-modal::backdrop {
     text-align: center;
   }
 
+  /* Sticky Bottom Action Bar with Safe Area Support */
   .mobile-actions {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border);
+    padding: 8px 10px calc(8px + var(--sab));
+    gap: 8px;
+    box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+  }
+
+  .mobile-actions a {
+    min-height: 48px;
+  }
+
+  .mobile-actions a:active {
+    transform: scale(0.97);
+  }
+
+  /* Booking Modal Mobile Adaptation */
+  dialog#booking-modal {
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+    margin: auto !important;
+    max-height: calc(100dvh - 30px) !important;
+    border-radius: var(--radius-lg);
   }
 
   .trip-type-selector {
     grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .trip-type-btn {
+    min-height: 42px;
+    padding: 8px 6px;
+    font-size: 0.82rem;
   }
 }
 
