@@ -1497,14 +1497,7 @@ input, select, textarea {
   background: #1e40af;
   border-color: #1e40af;
 }
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #64748b;
-  padding-top: 10px;
-  border-top: 1px solid #f1f5f9;
-}
+
 
 .corridor-trust-bar {
   display: flex;
