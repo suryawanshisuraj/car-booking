@@ -42,7 +42,7 @@
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-xl: 24px;
-  --radius-full: 9999px;
+  --radius-full: 6px;
 
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
   --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
@@ -229,8 +229,8 @@ input, select, textarea {
   background: #f0fdf4;
   color: #15803d;
   border: 1px solid #bbf7d0;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -243,7 +243,6 @@ input, select, textarea {
   height: 6px;
   border-radius: 50%;
   background: #16a34a;
-  box-shadow: 0 0 6px #16a34a;
 }
 
 .top-bar-route {
@@ -279,8 +278,8 @@ input, select, textarea {
   background: #f0fdf4;
   color: #16a34a;
   border: 1px solid #bbf7d0;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 0.75rem;
   transition: all var(--transition-fast);
@@ -292,7 +291,7 @@ input, select, textarea {
   border-color: #16a34a;
 }
 
-/* Floating Capsule Island Navbar - Light Glassmorphism */
+/* Executive Header Navbar - Crisp Modern Frame */
 .navbar {
   position: sticky;
   top: 12px;
@@ -306,13 +305,13 @@ input, select, textarea {
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   padding: 8px 18px 8px 14px;
-  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -322,7 +321,7 @@ input, select, textarea {
 
 .navbar.scrolled .nav-inner {
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   border-color: #cbd5e1;
 }
 
@@ -336,7 +335,7 @@ input, select, textarea {
 .logo-mark {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,7 +380,7 @@ input, select, textarea {
   gap: 4px;
   background: #f1f5f9;
   padding: 4px 6px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   border: 1px solid #e2e8f0;
 }
 
@@ -390,7 +389,7 @@ input, select, textarea {
   font-size: 0.88rem;
   font-weight: 600;
   padding: 7px 15px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   transition: all var(--transition-fast);
 }
 
@@ -401,8 +400,8 @@ input, select, textarea {
 
 .nav-links a.active:not(.btn) {
   color: #ffffff;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  background: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
 }
 
 .nav-actions-desktop {
@@ -419,7 +418,7 @@ input, select, textarea {
   font-size: 0.85rem;
   font-weight: 700;
   padding: 8px 14px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
@@ -441,7 +440,7 @@ input, select, textarea {
 .nav-book {
   padding: 9px 20px;
   font-size: 0.88rem;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   white-space: nowrap;
 }
 
@@ -535,7 +534,7 @@ input, select, textarea {
   color: #1d4ed8;
   border: 1px solid #dbeafe;
   padding: 5px 14px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
 }
 
 .hero-eyebrow span {
@@ -697,8 +696,8 @@ input, select, textarea {
   align-items: center;
   gap: 6px;
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 1.2px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   color: #15803d;
   text-transform: uppercase;
 }
@@ -708,13 +707,6 @@ input, select, textarea {
   height: 8px;
   border-radius: 50%;
   background: #16a34a;
-  box-shadow: 0 0 6px #16a34a;
-  animation: pulseLive 2s infinite ease-in-out;
-}
-
-@keyframes pulseLive {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.3); }
 }
 
 .badge-discount {
@@ -722,8 +714,8 @@ input, select, textarea {
   font-weight: 700;
   color: #1d4ed8;
   background: #eff6ff;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   border: 1px solid #bfdbfe;
 }
 
@@ -823,7 +815,7 @@ input, select, textarea {
 
 .trip-pill {
   padding: 8px 6px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #f8fafc;
   border: 1.5px solid #e2e8f0;
   color: #475569;
@@ -842,10 +834,10 @@ input, select, textarea {
 }
 
 .trip-pill.active {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1d4ed8;
   color: #ffffff;
-  border-color: #2563eb;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
   transform: translateY(-1px);
 }
 
@@ -1094,10 +1086,10 @@ input, select, textarea {
 }
 
 .fleet-tab {
-  padding: 11px 24px;
+  padding: 10px 22px;
   font-size: 0.95rem;
   font-weight: 700;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #ffffff;
   color: var(--secondary);
   border: 1.5px solid var(--border);
@@ -1110,10 +1102,10 @@ input, select, textarea {
 }
 
 .fleet-tab.active {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1d4ed8;
   color: #ffffff;
-  border-color: #2563eb;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
 }
 
 .cards.fleet-results {
@@ -1122,7 +1114,7 @@ input, select, textarea {
 
 .vehicle-card {
   background: #ffffff;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -1132,8 +1124,8 @@ input, select, textarea {
 }
 
 .vehicle-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   border-color: rgba(37, 99, 235, 0.4);
 }
 
@@ -1152,7 +1144,7 @@ input, select, textarea {
 }
 
 .vehicle-card:hover .vehicle-image img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .vehicle-category {
@@ -1164,8 +1156,8 @@ input, select, textarea {
   border: 1px solid rgba(56, 189, 248, 0.3);
   font-size: 0.76rem;
   font-weight: 700;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  border-radius: 4px;
   backdrop-filter: blur(8px);
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -1239,8 +1231,8 @@ input, select, textarea {
 }
 
 .corridor-tab {
-  padding: 9px 20px;
-  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  border-radius: 6px;
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
   color: #475569;
@@ -1258,10 +1250,10 @@ input, select, textarea {
 }
 
 .corridor-tab.active {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1d4ed8;
   color: #ffffff;
-  border-color: #2563eb;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
   transform: translateY(-1px);
 }
 
@@ -1274,7 +1266,7 @@ input, select, textarea {
 
 .corridor-card {
   background: #ffffff;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 1.5px solid #e2e8f0;
   padding: 24px;
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
@@ -1292,15 +1284,15 @@ input, select, textarea {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6, #16a34a);
+  background: #1d4ed8;
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
 
 .corridor-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: #93c5fd;
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
 }
 
 .corridor-card:hover::before {
@@ -1326,8 +1318,8 @@ input, select, textarea {
   color: #1d4ed8;
   background: #eff6ff;
   border: 1px solid #dbeafe;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
 .corridor-highway svg {
@@ -1341,8 +1333,8 @@ input, select, textarea {
   color: #15803d;
   background: #dcfce7;
   border: 1px solid #bbf7d0;
-  padding: 3px 9px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -1434,7 +1426,7 @@ input, select, textarea {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   padding: 2px 8px;
-  border-radius: var(--radius-full);
+  border-radius: 4px;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
@@ -1643,57 +1635,92 @@ input, select, textarea {
   gap: 20px;
 }
 
-.testimonial {
+.fleet-compliance-card {
   background: #ffffff;
-  color: var(--text-main);
-  padding: 26px 28px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
-  position: relative;
   border: 1px solid var(--border);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border-radius: var(--radius-md);
+  padding: 32px 30px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
-.testimonial:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-  border-color: #cbd5e1;
-}
-
-.testimonial-stars {
-  display: flex;
-  gap: 3px;
-  color: #f59e0b;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-}
-
-.testimonial p {
-  font-size: 0.96rem;
-  line-height: 1.6;
-  font-weight: 450;
+.compliance-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   margin-bottom: 16px;
-  color: #334155;
 }
 
-.testimonial-author {
+.compliance-badge-header svg {
+  color: #1d4ed8;
+}
+
+.fleet-compliance-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.fleet-compliance-card p {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.compliance-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  border-top: 1px solid #f1f5f9;
-  padding-top: 12px;
+  gap: 16px;
 }
 
-.testimonial-author b {
-  font-size: 0.94rem;
-  font-weight: 700;
+.compliance-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.compliance-checklist li svg {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.compliance-checklist li strong {
   color: #0f172a;
 }
 
-.testimonial-author span {
-  font-size: 0.8rem;
-  color: #64748b;
-  font-weight: 500;
+.compliance-contact-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.compliance-contact-note svg {
+  color: #2563eb;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -1911,7 +1938,7 @@ input, select, textarea {
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 14px;
-  border-radius: 50px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
@@ -1922,15 +1949,15 @@ input, select, textarea {
   background: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 /* Tier 3: Emergency Dispatch Central Helpline Banner */
 .footer-helpline-card {
   margin: 36px 0 44px;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border-radius: 16px;
+  background: #0f172a;
+  border-radius: var(--radius-md);
   padding: 30px 36px;
   display: flex;
   align-items: center;
@@ -1938,20 +1965,9 @@ input, select, textarea {
   gap: 28px;
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-  border: 1px solid #334155;
+  border: 1px solid #1e293b;
   position: relative;
   overflow: hidden;
-}
-
-.footer-helpline-card::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  right: -20%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .helpline-status {
@@ -1963,8 +1979,8 @@ input, select, textarea {
   letter-spacing: 0.8px;
   color: #4ade80;
   background: rgba(74, 222, 128, 0.12);
-  padding: 4px 10px;
-  border-radius: 20px;
+  padding: 4px 8px;
+  border-radius: 4px;
   margin-bottom: 10px;
   border: 1px solid rgba(74, 222, 128, 0.25);
 }
@@ -1974,23 +1990,6 @@ input, select, textarea {
   height: 8px;
   border-radius: 50%;
   background: #4ade80;
-  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
-  animation: pulse-ring 2s infinite;
-}
-
-@keyframes pulse-ring {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-  }
 }
 
 .helpline-info h3 {
@@ -2219,6 +2218,31 @@ input, select, textarea {
 
 .copyright-text {
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.legal-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.legal-nav a {
+  color: #475569;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.legal-nav a:hover {
+  color: var(--primary);
+}
+
+.legal-separator {
+  color: #94a3b8;
 }
 
 .payment-badges {
@@ -2610,5 +2634,120 @@ dialog#booking-modal::backdrop {
 
   .trip-type-selector {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Legal Document Pages (Privacy Policy & Terms and Conditions)
+   ========================================================================== */
+.legal-page-header {
+  padding: 120px 0 44px;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.legal-breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.legal-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.legal-page-header h1 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.legal-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.legal-container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.legal-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 44px 40px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.legal-section {
+  margin-bottom: 38px;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal-section p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.legal-section ul {
+  margin: 0 0 16px 20px;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.legal-section ul li {
+  margin-bottom: 8px;
+}
+
+.legal-highlight-box {
+  background: #eff6ff;
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-size: 0.92rem;
+  color: #1e3a8a;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .legal-page-header {
+    padding: 100px 0 32px;
+  }
+  .legal-page-header h1 {
+    font-size: 1.85rem;
+  }
+  .legal-card {
+    padding: 28px 20px;
   }
 }
