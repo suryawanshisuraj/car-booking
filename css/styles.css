@@ -1635,57 +1635,92 @@ input, select, textarea {
   gap: 20px;
 }
 
-.testimonial {
+.fleet-compliance-card {
   background: #ffffff;
-  color: var(--text-main);
-  padding: 26px 28px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
-  position: relative;
   border: 1px solid var(--border);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border-radius: var(--radius-md);
+  padding: 32px 30px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
-.testimonial:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-  border-color: #cbd5e1;
-}
-
-.testimonial-stars {
-  display: flex;
-  gap: 3px;
-  color: #f59e0b;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-}
-
-.testimonial p {
-  font-size: 0.96rem;
-  line-height: 1.6;
-  font-weight: 450;
+.compliance-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   margin-bottom: 16px;
-  color: #334155;
 }
 
-.testimonial-author {
+.compliance-badge-header svg {
+  color: #1d4ed8;
+}
+
+.fleet-compliance-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.fleet-compliance-card p {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.compliance-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  border-top: 1px solid #f1f5f9;
-  padding-top: 12px;
+  gap: 16px;
 }
 
-.testimonial-author b {
-  font-size: 0.94rem;
-  font-weight: 700;
+.compliance-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.compliance-checklist li svg {
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.compliance-checklist li strong {
   color: #0f172a;
 }
 
-.testimonial-author span {
-  font-size: 0.8rem;
-  color: #64748b;
-  font-weight: 500;
+.compliance-contact-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.compliance-contact-note svg {
+  color: #2563eb;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
