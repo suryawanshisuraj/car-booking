@@ -589,27 +589,6 @@ input, select, textarea {
   color: #2563eb;
 }
 
-.hero-trust {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-  padding-top: 22px;
-  border-top: 1px solid #e2e8f0;
-}
-
-.hero-trust span {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #334155;
-}
-
-.hero-trust svg {
-  color: #16a34a;
-}
 
 /* Slider Controls Indicators */
 .hero-slider-nav {
@@ -1851,60 +1830,6 @@ input, select, textarea {
   margin: 0;
 }
 
-/* Tier 2: Interactive Highway Corridor Quick Links */
-.footer-corridors-bar {
-  background: #f1f5f9;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 20px 0;
-}
-
-.footer-corridors-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.corridors-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-
-.footer-corridor-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.footer-chip {
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  color: #1e293b;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-  white-space: nowrap;
-}
-
-.footer-chip:hover {
-  background: #2563eb;
-  color: #ffffff;
-  border-color: #2563eb;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-}
 
 /* Tier 3: Emergency Dispatch Central Helpline Banner */
 .footer-helpline-card {
@@ -2422,8 +2347,7 @@ dialog#booking-modal::backdrop {
     justify-content: center;
   }
 
-  .hero-actions,
-  .hero-trust {
+  .hero-actions {
     justify-content: center;
   }
 
