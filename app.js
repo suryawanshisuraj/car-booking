@@ -1,5 +1,5 @@
 /**
- * Jay Bhavani Tours and Travels - Main Application Logic
+ * Vijay Tours and Travels - Main Application Logic
  */
 import { fleetData, popularRoutes } from './data.js';
 
@@ -221,12 +221,11 @@ function initHeroBookingForm() {
 }
 
 /* ==========================================================================
-   4. Express Highway Corridors Section & Footer Quick Links
+   4. Express Highway Corridors Section
    ========================================================================== */
 function initPopularRoutes() {
   const routesContainer = document.getElementById('popular-routes-list');
   const filterTabs = document.querySelectorAll('.corridor-tab');
-  const footerChips = document.querySelectorAll('.footer-chip');
 
   let currentFilter = 'all';
 
@@ -312,19 +311,6 @@ function initPopularRoutes() {
 
   // Initial render
   renderCorridors('all');
-
-  // Handle footer quick corridor chips
-  if (footerChips.length) {
-    footerChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        openBookingModal({
-          pickup: chip.dataset.from,
-          drop: chip.dataset.to,
-          tripType: 'Outstation'
-        });
-      });
-    });
-  }
 }
 
 /* ==========================================================================
@@ -442,7 +428,7 @@ export function openBookingModal(options = {}) {
 function sendBookingToWhatsApp(data) {
   const phone = "919529573880";
 
-  const message = `*JAY BHAVANI TOURS AND TRAVELS - CAB BOOKING REQUEST*
+  const message = `*VIJAY TOURS AND TRAVELS - CAB BOOKING REQUEST*
 ----------------------------------------
 *Customer Name:* ${data.customerName}
 *Phone Number:* ${data.phone}
@@ -453,7 +439,7 @@ function sendBookingToWhatsApp(data) {
 *Vehicle Preference:* ${data.vehicle || 'Any (Best Available)'}
 *Trip Type:* ${data.tripType || 'Standard'}
 ${data.notes ? `*Special Requests:* ${data.notes}\n` : ''}----------------------------------------
-_Sent via Jay Bhavani Tours and Travels Web Booking_`;
+_Sent via Vijay Tours and Travels Web Booking_`;
 
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
