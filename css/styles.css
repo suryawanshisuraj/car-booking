@@ -1086,10 +1086,10 @@ input, select, textarea {
 }
 
 .fleet-tab {
-  padding: 11px 24px;
+  padding: 10px 22px;
   font-size: 0.95rem;
   font-weight: 700;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #ffffff;
   color: var(--secondary);
   border: 1.5px solid var(--border);
@@ -1102,10 +1102,10 @@ input, select, textarea {
 }
 
 .fleet-tab.active {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1d4ed8;
   color: #ffffff;
-  border-color: #2563eb;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
 }
 
 .cards.fleet-results {
@@ -1114,7 +1114,7 @@ input, select, textarea {
 
 .vehicle-card {
   background: #ffffff;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -1124,8 +1124,8 @@ input, select, textarea {
 }
 
 .vehicle-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   border-color: rgba(37, 99, 235, 0.4);
 }
 
@@ -1144,7 +1144,7 @@ input, select, textarea {
 }
 
 .vehicle-card:hover .vehicle-image img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .vehicle-category {
@@ -1156,8 +1156,8 @@ input, select, textarea {
   border: 1px solid rgba(56, 189, 248, 0.3);
   font-size: 0.76rem;
   font-weight: 700;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  border-radius: 4px;
   backdrop-filter: blur(8px);
   text-transform: uppercase;
   letter-spacing: 0.8px;
