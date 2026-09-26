@@ -229,8 +229,8 @@ input, select, textarea {
   background: #f0fdf4;
   color: #15803d;
   border: 1px solid #bbf7d0;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -243,7 +243,6 @@ input, select, textarea {
   height: 6px;
   border-radius: 50%;
   background: #16a34a;
-  box-shadow: 0 0 6px #16a34a;
 }
 
 .top-bar-route {
@@ -279,8 +278,8 @@ input, select, textarea {
   background: #f0fdf4;
   color: #16a34a;
   border: 1px solid #bbf7d0;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 0.75rem;
   transition: all var(--transition-fast);
@@ -292,7 +291,7 @@ input, select, textarea {
   border-color: #16a34a;
 }
 
-/* Floating Capsule Island Navbar - Light Glassmorphism */
+/* Executive Header Navbar - Crisp Modern Frame */
 .navbar {
   position: sticky;
   top: 12px;
@@ -306,13 +305,13 @@ input, select, textarea {
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   padding: 8px 18px 8px 14px;
-  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -322,7 +321,7 @@ input, select, textarea {
 
 .navbar.scrolled .nav-inner {
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   border-color: #cbd5e1;
 }
 
@@ -336,7 +335,7 @@ input, select, textarea {
 .logo-mark {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,7 +380,7 @@ input, select, textarea {
   gap: 4px;
   background: #f1f5f9;
   padding: 4px 6px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   border: 1px solid #e2e8f0;
 }
 
@@ -390,7 +389,7 @@ input, select, textarea {
   font-size: 0.88rem;
   font-weight: 600;
   padding: 7px 15px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   transition: all var(--transition-fast);
 }
 
@@ -401,8 +400,8 @@ input, select, textarea {
 
 .nav-links a.active:not(.btn) {
   color: #ffffff;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  background: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
 }
 
 .nav-actions-desktop {
@@ -419,7 +418,7 @@ input, select, textarea {
   font-size: 0.85rem;
   font-weight: 700;
   padding: 8px 14px;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
@@ -441,7 +440,7 @@ input, select, textarea {
 .nav-book {
   padding: 9px 20px;
   font-size: 0.88rem;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   white-space: nowrap;
 }
 
