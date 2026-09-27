@@ -471,26 +471,60 @@ _Sent via Vijay Tours and Travels Web Booking_`;
 function initMobileMenu() {
   const menuBtn = document.querySelector('.menu-btn');
   const navLinks = document.querySelector('.nav-links');
+  let backdrop = document.getElementById('nav-backdrop');
+
   if (!menuBtn || !navLinks) return;
 
-  menuBtn.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen);
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.id = 'nav-backdrop';
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  function toggleMenu(open) {
+    const shouldOpen = open !== undefined ? open : !navLinks.classList.contains('open');
+    navLinks.classList.toggle('open', shouldOpen);
+    menuBtn.classList.toggle('active', shouldOpen);
+    menuBtn.setAttribute('aria-expanded', String(shouldOpen));
+    backdrop.classList.toggle('active', shouldOpen);
+    document.body.classList.toggle('nav-open', shouldOpen);
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
   });
 
   // Close nav when clicking a link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', false);
+      toggleMenu(false);
     });
   });
 
-  // Close when clicking outside
+  // Close when clicking backdrop or outside
+  backdrop.addEventListener('click', () => {
+    toggleMenu(false);
+  });
+
   document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', false);
+    if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Auto-close on resize beyond tablet breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991 && navLinks.classList.contains('open')) {
+      toggleMenu(false);
     }
   });
 }
