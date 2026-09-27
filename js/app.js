@@ -534,6 +534,24 @@ function initMobileMenu() {
    ========================================================================== */
 function initScrollNav() {
   const navbar = document.querySelector('.navbar');
+  const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html') || window.location.pathname === '';
+  const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
+
+  if (!isHomePage) {
+    // On subpages (such as Terms & Conditions and Privacy Policy), ensure Home is not incorrectly highlighted
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    });
+
+    window.addEventListener('scroll', () => {
+      if (navbar) {
+        navbar.classList.toggle('scrolled', window.pageYOffset > 30);
+      }
+    });
+    return;
+  }
+
   const sections = [
     { id: 'home', path: '/' },
     { id: 'services', path: '/services' },
@@ -543,7 +561,6 @@ function initScrollNav() {
     { id: 'reviews', path: '/reviews' },
     { id: 'contact', path: '/contact' }
   ];
-  const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
 
   window.addEventListener('scroll', () => {
     let currentPath = '/';
@@ -676,20 +693,23 @@ function initClientRouting() {
     }
 
     if (routeMap[href]) {
-      e.preventDefault();
-      scrollToTarget(routeMap[href]);
-      try { history.pushState({ path: href }, '', href); } catch (_) {}
+      const target = document.querySelector(routeMap[href]);
+      if (target) {
+        e.preventDefault();
+        scrollToTarget(routeMap[href]);
+        try { history.pushState({ path: href }, '', href); } catch (_) {}
 
-      document.querySelectorAll('.nav-links a:not(.btn)').forEach(a => {
-        if (a.getAttribute('href') === href) {
-          a.classList.add('active');
-          a.setAttribute('aria-current', 'page');
-        } else {
-          a.classList.remove('active');
-          a.removeAttribute('aria-current');
-        }
-      });
-      return;
+        document.querySelectorAll('.nav-links a:not(.btn)').forEach(a => {
+          if (a.getAttribute('href') === href) {
+            a.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+          } else {
+            a.classList.remove('active');
+            a.removeAttribute('aria-current');
+          }
+        });
+        return;
+      }
     }
 
     if (href.startsWith('#')) {
